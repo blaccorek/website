@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-emphasis: var(--color-gray-400);
+}
+
+body {
+    h1 {
+        @apply text-3xl font-bold m-2;
+    }
+
+    h2 {
+        @apply text-2xl font-bold m-1;
+    }
+
+    h3 {
+        @apply text-xl font-bold;
+    }
+
+    h4 {
+        @apply font-bold italic;
+    }
+}
