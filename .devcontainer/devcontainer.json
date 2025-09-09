@@ -13,7 +13,8 @@
 			"extensions": [
 				"svelte.svelte-vscode",
 				"esbenp.prettier-vscode",
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"mhutchie.git-graph"
 			],
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "fish"
@@ -22,5 +23,8 @@
 	},
 	"runArgs": [
 		"--network=host"
+	],
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
 	]
 }
