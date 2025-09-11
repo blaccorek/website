@@ -1,11 +1,13 @@
 {
     "experiences": [
         {
-            "jobTitle": "DevOps engineer",
-            "company": "CACIB",
-            "consultingCompany": "Wemanity",
-            "location": "Montrouge",
-            "description": "Worked in a team of 8 to build a brand new API management portal",
+            "position": {
+                "title": "DevOps engineer",
+                "company": "Wemanity",
+                "client": "CACIB"
+            },
+            "environment": "Worked in a team of 8 working in an agile environment using Scrum and Kanban methodologies",
+            "description": "Built a brand new API management portal named TSDL (Target Service Data Layer). It provides a self-service portal to create, manage, and monitor APIs. It includes features like API creation, documentation, compliency testing, and analytics.",
             "tasks": [
                 "Designed and developed the backend service and the portal.",
                 "Created the CI/CD pipeline including quality check and full pyramid testing workflow using ephemeral environments.",
@@ -26,35 +28,26 @@
                 "AWS",
                 "Cypress"
             ],
-            "startedOn": {
-                "month": 5,
-                "year": 2023
-            },
-            "finishedOn": {
-                "month": 8,
-                "year": 2025
-            }
+            "startDate": "May 2023",
+            "finishDate": "August 2025"
         },
         {
-            "jobTitle": "Consultant - Container deployment specialist",
-            "company": "SGCIB",
-            "consultingCompany": "Wemanity",
+            "position": {
+                "title": "Container deployment specialist",
+                "company": "Wemanity",
+                "client": "SGCIB"
+            },
             "location": "Fontenay-sous-bois",
-            "description": "Worked in the Deployment team of the Production practices Support Unit",
+            "environment": "Worked in the Deployment team of the Production practices Support Unit",
+            "description": "",
             "tasks": [
                 "Guide teams in adopting containerization standards and best practices.",
                 "Assess build and release processes.",
                 "Document deployment processes and infrastructure.",
                 "Assess infrastructure cost and efficiency."
             ],
-            "finishedOn": {
-                "month": 5,
-                "year": 2023
-            },
-            "startedOn": {
-                "month": 4,
-                "year": 2022
-            },
+            "finishDate": "May 2023",
+            "startDate": "April 2022",
             "technologies": [
                 "Docker",
                 "Kubernetes",
@@ -62,25 +55,22 @@
             ]
         },
         {
-            "jobTitle": "Cloud DevOps engineer",
-            "company": "Arondor",
+            "position": {
+                "title": "Cloud DevOps engineer",
+                "company": "Arondor"
+            },
             "location": "Paris",
             "description": "Worked in a team of 5 called ArchOps. Reunite Solution architects and ops of the company",
             "tasks": [
                 "Migrated on-Premise building tools to AWS.",
                 "Migrated pipelines from DroneCI to Jenkis.",
-                "Migrated ARender application from GCP to AWS.",
+                "Migrated ARender application (internal product) from GCP to AWS.",
                 "Guide teams in building CI/CD pipelines.",
-                "Assisted teams on internal tools issues."
+                "Assisted teams on internal tools issues.",
+                "Migrate Artifactory to AWS."
             ],
-            "finishedOn": {
-                "month": 3,
-                "year": 2022
-            },
-            "startedOn": {
-                "month": 1,
-                "year": 2021
-            },
+            "finishDate": "March 2022",
+            "startDate": "January 2023",
             "technologies": [
                 "Jenkins",
                 "AWS",
@@ -90,8 +80,10 @@
             ]
         },
         {
-            "jobTitle": "DevOps engineer",
-            "company": "Arondor",
+            "position": {
+                "title": "DevOps engineer",
+                "company": "Arondor"
+            },
             "location": "Paris",
             "description": "Worked in a team of 5 on ARender application - a document viewer",
             "tasks": [
@@ -105,14 +97,8 @@
                 "Participated in presales exchange.",
                 "Migrated website to Hugo."
             ],
-            "finishedOn": {
-                "month": 1,
-                "year": 2021
-            },
-            "startedOn": {
-                "month": 1,
-                "year": 2019
-            },
+            "finishDate": "January 2021",
+            "startDate": "January 2019",
             "technologies": [
                 "SpringBoot",
                 "Docker",
@@ -124,8 +110,10 @@
             ]
         },
         {
-            "jobTitle": "Software engineer",
-            "company": "Arondor",
+            "position": {
+                "title": "Software engineer",
+                "company": "Arondor"
+            },
             "location": "Paris",
             "description": "Worked in a team of 5 on ARender - a document viewer",
             "tasks": [
@@ -134,14 +122,8 @@
                 "Created end-to-end (e2e) tests using Selenium.",
                 "Created e2e envionment using Selenim grid and Docker."
             ],
-            "finishedOn": {
-                "month": 1,
-                "year": 2021
-            },
-            "startedOn": {
-                "month": 1,
-                "year": 2019
-            },
+            "finishDate": "January 2019",
+            "startDate": "January 2018",
             "technologies": [
                 "SpringBoot",
                 "Docker",
@@ -150,9 +132,11 @@
             ]
         },
         {
-            "jobTitle": "Deployment Technician",
-            "company": "Kobalt",
-            "client": "GE Healthcare",
+            "position": {
+                "title": "Deployment Technician",
+                "company": "Kobalt",
+                "client": "GE Healthcare"
+            },
             "location": "Buc",
             "description": "Worked in a team of 6 to roll out new hardware across the IT environment.",
             "tasks": [
@@ -162,41 +146,49 @@
             "technologies": [
                 "Windows 10"
             ],
-            "startedOn": {
-                "month": 4,
-                "year": 2017
-            },
-            "finishedOn": {
-                "month": 9,
-                "year": 2017
-            }
+            "startDate": "April 2017",
+            "finishDate": "September 2017"
         },
         {
-            "jobTitle": "Information Systems Coordinator",
-            "company": "Renault retail group",
+            "position": {
+                "title": "Information Systems Coordinator",
+                "company": "Renault retail group"
+            },
             "location": "Boulogne",
             "description": "Worked in a team of 2 to provide first-line support to users.",
             "tasks": [
                 "Provided first-level IT support to end users.",
-                "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
-            ],
-            "technologies": [
-                "Windows 10"
-            ]
-        },
-        {
-            "jobTitle": "Information Systems Coordinator",
-            "company": "Renault retail group",
-            "location": "Paris",
-            "description": "Worked in a team of 2 to provide first-line support to users.",
-            "tasks": [
-                "Provided first-level IT support to end users.",
+                "Migrate users from Windows 7 to Windows 10.",
                 "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
             ],
             "technologies": [
                 "Windows 7",
                 "Windows 10"
-            ]
+            ],
+            "startDate": "September 2016",
+            "finishDate": "February 2017"
+        },
+        {
+            "position": {
+                "title": "Information Systems Coordinator",
+                "company": {
+                    "name": "Renault retail group",
+                    "url": "https://www.renaultretailgroup.com/",
+                    "description": "Renault retail group is the dedicated sales subsidiary of the Renault group in France."
+                }
+            },
+            "location": "Paris",
+            "description": "Provided IT support to end users.",
+            "members": "Worked in a team of 2",
+            "tasks": [
+                "Provided first-level IT support to end users.",
+                "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
+            ],
+            "technologies": [
+                "Windows 7"
+            ],
+            "startDate": "October 2015",
+            "finishDate": "August 2016"
         }
     ]
 }

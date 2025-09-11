@@ -1,12 +1,10 @@
-type SchoolTime = {
-    year: number;
-    month?: number;
-};
-
-interface School {
+type School = {
     name: string;
-    diploma?: string;
+    websiteUrl?: string;
+    degree?: string;
+    programType?: string;
     description?: string;
-    startedOn?: SchoolTime;
-    finishedOn: SchoolTime;
-}
+    startYear?: number;
+    hasValidity?: boolean;
+    endYear: number;
+};

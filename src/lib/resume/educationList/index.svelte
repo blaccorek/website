@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { Timeline } from 'flowbite-svelte';
+
     import SchoolDetails from './schoolDetails.svelte';
 
     interface Props {
@@ -8,8 +10,8 @@
     const { schools }: Props = $props();
 </script>
 
-<ol class="flex flex-col">
+<Timeline order="vertical">
     {#each schools as school}
         <SchoolDetails {...school} />
     {/each}
-</ol>
+</Timeline>

@@ -1,22 +1,12 @@
 <script lang="ts">
-    import Identity from '$lib/resume/identity/index.svelte';
-    import EducationList from '$lib/resume/educationList/index.svelte';
-    import ExperienceList from '$lib/resume/experienceList/index.svelte';
-    import type { PageProps } from './$types';
-
-    const { data }: PageProps = $props();
+    import { Blockquote, P } from 'flowbite-svelte';
 </script>
 
-<main class="container place-self-center">
-    <article class="p-8">
-        <Identity firstname="Tsiorintsoa" lastname="Andriamihamina" jobTitle="DevOps consultant" />
-        <section>
-            <h2>Work Experience</h2>
-            <ExperienceList experiences={data.experiences} />
-        </section>
-        <section>
-            <h2>Education</h2>
-            <EducationList schools={data.schools} />
-        </section>
-    </article>
+<main class="p-8">
+    <Blockquote size="xl">
+        Hello,
+        <br />
+        I'm Tsiorintsoa Andriamihamina, a DevOps consultant with a passion for building
+        scalable and efficient systems. Welcome to my online resume!
+    </Blockquote>
 </main>
