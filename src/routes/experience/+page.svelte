@@ -10,6 +10,9 @@
 <article class="p-8">
     <section>
         <Heading tag="h2" class="p-4">Work Experience</Heading>
-        <ExperienceList experiences={data.experiences} />
+        <ExperienceList
+            experiences={data.experiences}
+            technologies={data.technologies}
+        />
     </section>
 </article>

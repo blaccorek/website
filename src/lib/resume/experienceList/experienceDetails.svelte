@@ -3,6 +3,8 @@
     import { Heading, List, P, TimelineItem } from 'flowbite-svelte';
     import { BriefcaseOutline } from 'flowbite-svelte-icons';
 
+    import TechnologyIcon from './technologyIcon.svelte';
+
     const props = $props();
 
     const {
@@ -12,7 +14,7 @@
         description,
         tasks,
         technologies
-    }: ExperienceDetails = props;
+    }: DetailedTechnologiesExperience = props;
 
     const buildTitle = ({ title, company, client }: Position) => {
         let str = `${title} at ${client ?? company}`;
@@ -49,9 +51,15 @@
 
     <section>
         <Heading tag="h3" class="text-sm">Technologies</Heading>
-        <List tag="dl" class="flex gap-2">
+        <List tag="dl" class="flex gap-2 py-2 flex-wrap">
             {#each technologies as technology}
-                <li>{technology}</li>
+                <li>
+                    <TechnologyIcon
+                        name={technology.name}
+                        icon={technology.icon}
+                        url={technology.url}
+                    />
+                </li>
             {/each}
         </List>
     </section>

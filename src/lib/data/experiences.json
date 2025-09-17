@@ -6,6 +6,7 @@
                 "company": "Wemanity",
                 "client": "CACIB"
             },
+            "location": "Montrouge",
             "environment": "Worked in a team of 8 working in an agile environment using Scrum and Kanban methodologies",
             "description": "Built a brand new API management portal named TSDL (Target Service Data Layer). It provides a self-service portal to create, manage, and monitor APIs. It includes features like API creation, documentation, compliency testing, and analytics.",
             "tasks": [
