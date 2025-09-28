@@ -1,6 +1,6 @@
 <script lang="ts">
     import { toCamelCase } from '$lib/string';
-    import { Heading, List, P, TimelineItem } from 'flowbite-svelte';
+    import { List, P, TimelineItem } from 'flowbite-svelte';
     import { BriefcaseOutline } from 'flowbite-svelte-icons';
 
     import TechnologyIcon from './technologyIcon.svelte';
@@ -12,7 +12,8 @@
         finishDate,
         position,
         description,
-        tasks,
+        environment,
+        missions,
         technologies
     }: DetailedTechnologiesExperience = props;
 
@@ -41,26 +42,50 @@
             />
         </span>
     {/snippet}
-    <P>{description}</P>
-
-    <List tag="ul" class="pl-8">
-        {#each tasks as task}
-            <li>{task}</li>
-        {/each}
-    </List>
 
     <section>
-        <Heading tag="h3" class="text-sm">Technologies</Heading>
-        <List tag="dl" class="flex gap-2 py-2 flex-wrap">
-            {#each technologies as technology}
-                <li>
-                    <TechnologyIcon
-                        name={technology.name}
-                        icon={technology.icon}
-                        url={technology.url}
-                    />
-                </li>
-            {/each}
-        </List>
-    </section>
-</TimelineItem>
+        <dl>
+            <dt class="font-semibold">Description</dt>
+            <dd class="px-8">
+                {#if Array.isArray(description)}
+                    {#each description as desc}
+                        <P class="mb-1">{desc}</P>
+                    {/each}
+                {:else}
+                    <P>{description}</P>
+                {/if}
+            </dd>
+
+            {#if environment}
+                <dt class="font-semibold">Environment</dt>
+                <dd class="px-8">{environment}</dd>
+            {/if}
+
+            <dt class="font-semibold">Missions</dt>
+            <dd>
+                <List tag="ul" class="pl-8">
+                    {#each missions as mission}
+                        <li>{mission}</li>
+                    {/each}
+                </List>
+            </dd>
+
+            <dt class="font-semibold">Technologies</dt>
+            <dd>
+                <List tag="dl" class="flex gap-2 py-2 flex-wrap px-8">
+                    {#each technologies as technology}
+                        <li>
+                            <TechnologyIcon
+                                name={technology.name}
+                                icon={technology.icon}
+                                url={technology.url}
+                            />
+                        </li>
+                    {/each}
+                </List>
+            </dd>
+        </dl>
+
+        <section></section>
+    </section></TimelineItem
+>

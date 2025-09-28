@@ -9,7 +9,8 @@ type Experience = {
     startDate: string;
     finishDate?: string;
     description: string;
-    tasks: string[];
+    environment?: string;
+    missions: string[];
     technologies: string[];
 };
 

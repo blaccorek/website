@@ -7,9 +7,13 @@
                 "client": "CACIB"
             },
             "location": "Montrouge",
-            "environment": "Worked in a team of 8 working in an agile environment using Scrum and Kanban methodologies",
-            "description": "Built a brand new API management portal named TSDL (Target Service Data Layer). It provides a self-service portal to create, manage, and monitor APIs. It includes features like API creation, documentation, compliency testing, and analytics.",
-            "tasks": [
+            "environment": "Worked in a team of 8 working in an agile environment using a mix of Scrum and Kanban methodologies",
+            "description": [
+                "Built a brand new API management portal named TSDL (Target Service Data Layer).",
+                "It provides a self-service portal to create, manage, and monitor APIs and includes features like API creation, documentation, compliency testing, and analytics.",
+                "It supports OpenAPI, AsyncApi, Protobuff, GraphQL and dataset contracts."
+            ],
+            "missions": [
                 "Designed and developed the backend service and the portal.",
                 "Created the CI/CD pipeline including quality check and full pyramid testing workflow using ephemeral environments.",
                 "Managed release process.",
@@ -39,21 +43,17 @@
                 "client": "SGCIB"
             },
             "location": "Fontenay-sous-bois",
-            "environment": "Worked in the Deployment team of the Production practices Support Unit",
-            "description": "",
-            "tasks": [
-                "Guide teams in adopting containerization standards and best practices.",
-                "Assess build and release processes.",
-                "Document deployment processes and infrastructure.",
-                "Assess infrastructure cost and efficiency."
+            "description": "Assisted various teams in the bank to adopt containerization and improve their deployment processes.",
+            "environment": "Worked in the Deployment team of the Production practices Support Unit a team of 8 people. The team is divided in 3 sub-teams: testing, change management and deployment.",
+            "missions": [
+                "Guided teams in adopting containerization standards and best practices.",
+                "Assessed build and release processes.",
+                "Documented deployment processes and infrastructure.",
+                "Assessed infrastructure cost and efficiency."
             ],
             "finishDate": "May 2023",
             "startDate": "April 2022",
-            "technologies": [
-                "Docker",
-                "Kubernetes",
-                "Jenkins"
-            ]
+            "technologies": ["Docker", "Kubernetes", "Jenkins"]
         },
         {
             "position": {
@@ -61,8 +61,9 @@
                 "company": "Arondor"
             },
             "location": "Paris",
-            "description": "Worked in a team of 5 called ArchOps. Reunite Solution architects and ops of the company",
-            "tasks": [
+            "description": "Migrated and maintained CI/CD pipelines and internal tools on a cloud environment.",
+            "environment": "Worked in a team of 5 called ArchOps. Gather all Solution architects and ops of the company",
+            "missions": [
                 "Migrated on-Premise building tools to AWS.",
                 "Migrated pipelines from DroneCI to Jenkis.",
                 "Migrated ARender application (internal product) from GCP to AWS.",
@@ -86,8 +87,9 @@
                 "company": "Arondor"
             },
             "location": "Paris",
-            "description": "Worked in a team of 5 on ARender application - a document viewer",
-            "tasks": [
+            "description": "Developed and maintained the CI/CD pipeline and the kubernetes environment of ARender - a document viewer",
+            "environment": "Worked in a team of 5 on ARender application",
+            "missions": [
                 "Containerised application.",
                 "Created kubernetes environment with Rancher on GCP.",
                 "Deployed application.",
@@ -116,21 +118,17 @@
                 "company": "Arondor"
             },
             "location": "Paris",
-            "description": "Worked in a team of 5 on ARender - a document viewer",
-            "tasks": [
+            "description": "Developed and maintained features of the application and created new end-to-end tests.",
+            "environment": "Worked in a team of 5 on ARender - a document viewer",
+            "missions": [
                 "Designed and Developed features of the application.",
-                "Ensure client support.",
+                "Ensured client support.",
                 "Created end-to-end (e2e) tests using Selenium.",
                 "Created e2e envionment using Selenim grid and Docker."
             ],
             "finishDate": "January 2019",
             "startDate": "January 2018",
-            "technologies": [
-                "SpringBoot",
-                "Docker",
-                "GWT",
-                "Selenium"
-            ]
+            "technologies": ["SpringBoot", "Docker", "GWT", "Selenium"]
         },
         {
             "position": {
@@ -139,14 +137,13 @@
                 "client": "GE Healthcare"
             },
             "location": "Buc",
-            "description": "Worked in a team of 6 to roll out new hardware across the IT environment.",
-            "tasks": [
+            "description": "Provided IT support and deployed new hardware to end users.",
+            "environment": "Worked in a team of 6, deployed new hardware to 300+ users",
+            "missions": [
                 "Deployed new laptops and desktops to replace existing user machines.",
                 "Provided first-level IT support to end users."
             ],
-            "technologies": [
-                "Windows 10"
-            ],
+            "technologies": ["Windows 10"],
             "startDate": "April 2017",
             "finishDate": "September 2017"
         },
@@ -156,38 +153,30 @@
                 "company": "Renault retail group"
             },
             "location": "Boulogne",
-            "description": "Worked in a team of 2 to provide first-line support to users.",
-            "tasks": [
+            "description": "Provided IT support to end users.",
+            "environment": "Worked in a team of 2",
+            "missions": [
                 "Provided first-level IT support to end users.",
-                "Migrate users from Windows 7 to Windows 10.",
+                "Migrated users from Windows 7 to Windows 10.",
                 "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
             ],
-            "technologies": [
-                "Windows 7",
-                "Windows 10"
-            ],
+            "technologies": ["Windows 7", "Windows 10"],
             "startDate": "September 2016",
             "finishDate": "February 2017"
         },
         {
             "position": {
                 "title": "Information Systems Coordinator",
-                "company": {
-                    "name": "Renault retail group",
-                    "url": "https://www.renaultretailgroup.com/",
-                    "description": "Renault retail group is the dedicated sales subsidiary of the Renault group in France."
-                }
+                "company": "Renault retail group"
             },
             "location": "Paris",
             "description": "Provided IT support to end users.",
-            "members": "Worked in a team of 2",
-            "tasks": [
+            "environment": "Worked in a team of 2",
+            "missions": [
                 "Provided first-level IT support to end users.",
                 "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
             ],
-            "technologies": [
-                "Windows 7"
-            ],
+            "technologies": ["Windows 7"],
             "startDate": "October 2015",
             "finishDate": "August 2016"
         }
