@@ -1,28 +1,28 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/base:bookworm",
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainer-community/devcontainer-features/chezmoi.io:1": {},
-        "ghcr.io/meaningful-ooo/devcontainer-features/fish:2": {},
-        "ghcr.io/devcontainers-extra/features/starship": {},
-        "ghcr.io/devcontainers/features/node:1": {}
-    },
-    "onCreateCommand": "chezmoi init --branch main https://github.com/blaccorek/dotfiles.git && chezmoi apply",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "svelte.svelte-vscode",
-                "esbenp.prettier-vscode",
-                "dbaeumer.vscode-eslint",
-                "mhutchie.git-graph"
-            ],
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "fish"
-            }
-        }
-    },
-    "runArgs": ["--network=host"],
-    "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
-    ]
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/chezmoi.io:1": {},
+    "ghcr.io/meaningful-ooo/devcontainer-features/fish:2": {},
+    "ghcr.io/devcontainers-extra/features/starship": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "onCreateCommand": "chezmoi init --branch main https://github.com/blaccorek/dotfiles.git && chezmoi apply",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "mhutchie.git-graph"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "fish"
+      }
+    }
+  },
+  "runArgs": ["--network=host"],
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ]
 }

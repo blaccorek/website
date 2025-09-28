@@ -1,45 +1,45 @@
 {
-    "schools": [
-        {
-            "name": "AWS Training and Certification",
-            "websiteUrl": "https://aws.amazon.com/training/",
-            "degree": "AWS Certified SysOps administrator – Associate",
-            "description": "This certification validates technical expertise in deployment, management, and operations on the AWS platform.",
-            "hasValidity": true,
-            "startYear": 2021,
-            "endYear": 2024
-        },
-        {
-            "name": "ETNA - École des technologies numériques avancées (IT school)",
-            "websiteUrl": "https://etna.io/",
-            "degree": "Professional Master's Degree - Software Architecture & Application Development",
-            "description": "Work-study program that combines full-stack development, software architecture, and specialized fields like mobile apps and cloud computing, providing hands-on experience in real-world projects to prepare graduates for high-demand roles in tech.",
-            "startYear": 2017,
-            "endYear": 2019
-        },
-        {
-            "name": "EPITECH - European institute of technology",
-            "websiteUrl": "https://www.epitech.eu/",
-            "degree": "Bachelor degree in computer science",
-            "description": "Completed a 3-year program at Epitech in IT engineering, focused on software development, network security, and real-world projects using Java, Python, Linux, and low level programing languages like C and C++.",
-            "startYear": 2014,
-            "endYear": 2017
-        },
-        {
-            "name": "ISTOM - École supérieure d'aggro-dévelopement international",
-            "programType": "Preparatory cycle of the engineering program",
-            "description": "Focuses on building a solid foundation in science, agriculture, and development through both theoretical knowledge and hands-on experience.",
-            "websiteUrl": "https://www.istom.fr/fr",
-            "startYear": 2012,
-            "endYear": 2014
-        },
-        {
-            "name": "Lycée Jean-Baptiste Poquelin",
-            "websiteUrl": "https://www.lycee-jbpoquelin.fr/site/",
-            "degree": "French Baccalauréat in Science and Laboratory Technology (STL), specialization in Human Biology",
-            "description": "High school diploma graduated with high honor",
-            "startYear": 2009,
-            "endYear": 2012
-        }
-    ]
+  "schools": [
+    {
+      "name": "AWS Training and Certification",
+      "websiteUrl": "https://aws.amazon.com/training/",
+      "degree": "AWS Certified SysOps administrator – Associate",
+      "description": "This certification validates technical expertise in deployment, management, and operations on the AWS platform.",
+      "hasValidity": true,
+      "startYear": 2021,
+      "endYear": 2024
+    },
+    {
+      "name": "ETNA - École des technologies numériques avancées (IT school)",
+      "websiteUrl": "https://etna.io/",
+      "degree": "Professional Master's Degree - Software Architecture & Application Development",
+      "description": "Work-study program that combines full-stack development, software architecture, and specialized fields like mobile apps and cloud computing, providing hands-on experience in real-world projects to prepare graduates for high-demand roles in tech.",
+      "startYear": 2017,
+      "endYear": 2019
+    },
+    {
+      "name": "EPITECH - European institute of technology",
+      "websiteUrl": "https://www.epitech.eu/",
+      "degree": "Bachelor degree in computer science",
+      "description": "Completed a 3-year program at Epitech in IT engineering, focused on software development, network security, and real-world projects using Java, Python, Linux, and low level programing languages like C and C++.",
+      "startYear": 2014,
+      "endYear": 2017
+    },
+    {
+      "name": "ISTOM - École supérieure d'aggro-dévelopement international",
+      "programType": "Preparatory cycle of the engineering program",
+      "description": "Focuses on building a solid foundation in science, agriculture, and development through both theoretical knowledge and hands-on experience.",
+      "websiteUrl": "https://www.istom.fr/fr",
+      "startYear": 2012,
+      "endYear": 2014
+    },
+    {
+      "name": "Lycée Jean-Baptiste Poquelin",
+      "websiteUrl": "https://www.lycee-jbpoquelin.fr/site/",
+      "degree": "French Baccalauréat in Science and Laboratory Technology (STL), specialization in Human Biology",
+      "description": "High school diploma graduated with high honor",
+      "startYear": 2009,
+      "endYear": 2012
+    }
+  ]
 }

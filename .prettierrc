@@ -22,6 +22,12 @@
             "options": {
                 "parser": "svelte"
             }
+        },
+        {
+            "files": "*.json|*.yml|*.yaml",
+            "options": {
+                "tabWidth": 2
+            }
         }
     ],
     "tailwindStylesheet": "./src/app.css",
