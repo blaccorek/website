@@ -1,86 +1,86 @@
 {
     "technologies": {
         "ArgoCD": {
-            "icon": "/technologies/argocd.png",
+            "icon": "/images/technologies/argocd.png",
             "url": "https://argo-cd.readthedocs.io/en/stable/"
         },
         "Artifactory": {
-            "icon": "/technologies/artifactory.png",
+            "icon": "/images/technologies/artifactory.png",
             "url": "https://jfrog.com/artifactory/"
         },
         "AWS": {
-            "icon": "/technologies/aws.png",
+            "icon": "/images/technologies/aws.png",
             "url": "https://aws.amazon.com/"
         },
         "Clap": {
-            "icon": "/technologies/clap.png",
+            "icon": "/images/technologies/clap.png",
             "url": "https://docs.rs/clap/latest/clap/"
         },
         "Cypress": {
-            "icon": "/technologies/cypress.png",
+            "icon": "/images/technologies/cypress.png",
             "url": "https://www.cypress.io/"
         },
         "Docker": {
-            "icon": "/technologies/docker.png",
+            "icon": "/images/technologies/docker.png",
             "url": "https://www.docker.com/"
         },
         "DroneCI": {
-            "icon": "/technologies/droneci.png",
+            "icon": "/images/technologies/droneci.png",
             "url": "https://drone.io/"
         },
         "GCP": {
-            "icon": "/technologies/gcp.png",
+            "icon": "/images/technologies/gcp.png",
             "url": "https://cloud.google.com/"
         },
         "GitLab": {
-            "icon": "/technologies/gitlab.png",
+            "icon": "/images/technologies/gitlab.png",
             "url": "https://about.gitlab.com/"
         },
         "GWT": {
-            "icon": "/technologies/gwt.png",
+            "icon": "/images/technologies/gwt.png",
             "url": "http://www.gwtproject.org/"
         },
         "Hugo": {
-            "icon": "/technologies/hugo.png",
+            "icon": "/images/technologies/hugo.png",
             "url": "https://gohugo.io/"
         },
         "Jenkins": {
-            "icon": "/technologies/jenkins.png",
+            "icon": "/images/technologies/jenkins.png",
             "url": "https://www.jenkins.io/"
         },
         "Kong": {
-            "icon": "/technologies/kong.png",
+            "icon": "/images/technologies/kong.png",
             "url": "https://konghq.com/"
         },
         "Kubernetes": {
-            "icon": "/technologies/kubernetes.png",
+            "icon": "/images/technologies/kubernetes.png",
             "url": "https://kubernetes.io/"
         },
         "Rancher": {
-            "icon": "/technologies/rancher.png",
+            "icon": "/images/technologies/rancher.png",
             "url": "https://rancher.com/"
         },
         "React": {
-            "icon": "/technologies/react.png",
+            "icon": "/images/technologies/react.png",
             "url": "https://react.dev/"
         },
         "Selenium": {
-            "icon": "/technologies/selenium.png",
+            "icon": "/images/technologies/selenium.png",
             "url": "https://www.selenium.dev/"
         },
         "Specmatic": {
-            "icon": "/technologies/specmatic.png",
+            "icon": "/images/technologies/specmatic.png",
             "url": "https://docs.specmatic.io/"
         },
         "SpringBoot": {
-            "icon": "/technologies/springboot.png",
+            "icon": "/images/technologies/springboot.png",
             "url": "https://spring.io/projects/spring-boot"
         },
         "Windows 7": {
-            "icon": "/technologies/windows7.png"
+            "icon": "/images/technologies/windows7.png"
         },
         "Windows 10": {
-            "icon": "/technologies/windows10.png"
+            "icon": "/images/technologies/windows10.png"
         }
     }
 }
