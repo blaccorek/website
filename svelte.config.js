@@ -8,14 +8,20 @@ const config = {
     preprocess: vitePreprocess(),
 
     kit: {
-        // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-        // If your environment is not supported or you settled on a specific environment, switch out the adapter.
-        // See https://kit.svelte.dev/docs/adapters for more information about adapters.
         adapter: adapter({
             fallback: '404.html'
         }),
         paths: {
+            // Set base path for static hosting (e.g., GitHub Pages, custom domain)
             base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+        },
+        prerender: {
+            handleHttpError: ({ status, path }) => {
+                // Suppress 404 errors for missing routes during prerender
+                if (status === 404) return 'ignore';
+                // For other errors, throw
+                throw new Error(`${status} error on ${path}`);
+            }
         }
     }
 };
