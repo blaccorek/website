@@ -10,7 +10,7 @@
     const links = $derived(
         data?.menuItems.map((item) => ({
             name: item.title,
-            href: item.href,
+            href: ".." + item.href,
             current: item.href == data?.currentPage
         })) ?? []
     );
