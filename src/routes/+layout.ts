@@ -1,5 +1,3 @@
-import { A } from 'flowbite-svelte';
-
 import type { LayoutLoad } from './$types';
 
 export const prerender = true;

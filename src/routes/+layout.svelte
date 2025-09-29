@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import Footer from '$lib/app/footer/index.svelte';
     import Identity from '$lib/resume/identity/index.svelte';
     import { Listgroup } from 'flowbite-svelte';
@@ -10,7 +11,7 @@
     const links = $derived(
         data?.menuItems.map((item) => ({
             name: item.title,
-            href: ".." + item.href,
+            href: resolve(item.href, {}),
             current: item.href == data?.currentPage
         })) ?? []
     );
