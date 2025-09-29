@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import { Timeline } from 'flowbite-svelte';
 
     import ExperienceDetails from './experienceDetails.svelte';
@@ -14,7 +15,13 @@
             ...exp,
             technologies: exp.technologies.map((tech) => {
                 const foundTech = technologies[tech];
-                return { name: tech, ...(foundTech ?? {}) };
+                return {
+                    name: tech,
+                    url: foundTech?.url ?? undefined,
+                    icon: foundTech.icon
+                        ? resolve(foundTech?.icon, {})
+                        : undefined
+                };
             })
         };
     });
