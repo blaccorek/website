@@ -35,7 +35,7 @@
 >
     {#snippet orientationSlot()}
         <span
-            class="bg-gray-200 dark:bg-primary-900 absolute -start-3 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white dark:ring-gray-900"
+            class="bg-gray-200 dark:bg-primary-900 absolute -start-5 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white dark:ring-gray-900"
         >
             <BriefcaseOutline
                 class="text-primary-600 dark:text-primary-400 h-6 w-6"
