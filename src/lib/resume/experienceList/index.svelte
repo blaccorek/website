@@ -10,21 +10,23 @@
     }
 
     const { experiences, technologies }: ExperienceListProps = $props();
-    const updatedExperiences = experiences.map((exp) => {
-        return {
-            ...exp,
-            technologies: exp.technologies.map((tech) => {
-                const foundTech = technologies[tech];
-                return {
-                    name: tech,
-                    url: foundTech?.url ?? undefined,
-                    icon: foundTech.icon
-                        ? resolve(foundTech?.icon, {})
-                        : undefined
-                };
-            })
-        };
-    });
+    const updatedExperiences = $derived(
+        experiences.map((exp) => {
+            return {
+                ...exp,
+                technologies: exp.technologies.map((tech) => {
+                    const foundTech = technologies[tech];
+                    return {
+                        name: tech,
+                        url: foundTech?.url ?? undefined,
+                        icon: foundTech.icon
+                            ? resolve(foundTech?.icon, {})
+                            : undefined
+                    };
+                })
+            };
+        })
+    );
 </script>
 
 <Timeline order="vertical">

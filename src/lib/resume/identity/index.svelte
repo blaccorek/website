@@ -11,7 +11,7 @@
     const toCamelCase = (str: string) =>
         str.charAt(0).toLocaleUpperCase() + str.substring(1);
 
-    const fullname = `${toCamelCase(firstname)} ${lastname.toLocaleUpperCase()}`;
+    const fullname = $derived(`${toCamelCase(firstname)} ${lastname.toLocaleUpperCase()}`);
 </script>
 
 <header class="place-self-center text-center pb-4">
