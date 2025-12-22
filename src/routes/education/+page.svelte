@@ -1,7 +1,5 @@
 <script lang="ts">
     import EducationList from '$lib/resume/educationList/index.svelte';
-    import ExperienceList from '$lib/resume/experienceList/index.svelte';
-    import Identity from '$lib/resume/identity/index.svelte';
     import { Heading } from 'flowbite-svelte';
 
     import type { PageProps } from './$types';
