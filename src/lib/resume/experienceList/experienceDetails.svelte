@@ -5,8 +5,6 @@
 
     import TechnologyIcon from './technologyIcon.svelte';
 
-    const props = $props();
-
     const {
         startDate,
         finishDate,
@@ -15,7 +13,7 @@
         environment,
         missions,
         technologies
-    }: DetailedTechnologiesExperience = props;
+    }: DetailedTechnologiesExperience = $props();
 
     const buildTitle = ({ title, company, client }: Position) => {
         let str = `${title} at ${client ?? company}`;
@@ -25,7 +23,7 @@
         return str;
     };
 
-    const title = buildTitle(position);
+    const title = $derived(buildTitle(position));
 </script>
 
 <TimelineItem
@@ -85,7 +83,5 @@
                 </List>
             </dd>
         </dl>
-
-        <section></section>
-    </section></TimelineItem
->
+    </section>
+</TimelineItem>
