@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Avatar, Tooltip } from 'flowbite-svelte';
 
-    const { name, icon, url } = $props();
+    const { name, icon, url }: Technology = $props();
 </script>
 
 <Avatar
