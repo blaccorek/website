@@ -34,7 +34,7 @@
         "Cypress"
       ],
       "startDate": "May 2023",
-      "finishDate": "August 2025"
+      "finishDate": "November 2025"
     },
     {
       "position": {
@@ -53,7 +53,11 @@
       ],
       "finishDate": "May 2023",
       "startDate": "April 2022",
-      "technologies": ["Docker", "Kubernetes", "Jenkins"]
+      "technologies": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins"
+      ]
     },
     {
       "position": {
@@ -73,7 +77,13 @@
       ],
       "finishDate": "March 2022",
       "startDate": "January 2023",
-      "technologies": ["Jenkins", "AWS", "Artifactory", "Docker", "Kubernetes"]
+      "technologies": [
+        "Jenkins",
+        "AWS",
+        "Artifactory",
+        "Docker",
+        "Kubernetes"
+      ]
     },
     {
       "position": {
@@ -122,7 +132,12 @@
       ],
       "finishDate": "January 2019",
       "startDate": "January 2018",
-      "technologies": ["SpringBoot", "Docker", "GWT", "Selenium"]
+      "technologies": [
+        "SpringBoot",
+        "Docker",
+        "GWT",
+        "Selenium"
+      ]
     },
     {
       "position": {
@@ -137,7 +152,9 @@
         "Deployed new laptops and desktops to replace existing user machines.",
         "Provided first-level IT support to end users."
       ],
-      "technologies": ["Windows 10"],
+      "technologies": [
+        "Windows 10"
+      ],
       "startDate": "April 2017",
       "finishDate": "September 2017"
     },
@@ -154,7 +171,10 @@
         "Migrated users from Windows 7 to Windows 10.",
         "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
       ],
-      "technologies": ["Windows 7", "Windows 10"],
+      "technologies": [
+        "Windows 7",
+        "Windows 10"
+      ],
       "startDate": "September 2016",
       "finishDate": "February 2017"
     },
@@ -170,7 +190,9 @@
         "Provided first-level IT support to end users.",
         "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
       ],
-      "technologies": ["Windows 7"],
+      "technologies": [
+        "Windows 7"
+      ],
       "startDate": "October 2015",
       "finishDate": "August 2016"
     }
