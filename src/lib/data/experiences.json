@@ -9,7 +9,7 @@
       "location": "Montrouge",
       "environment": "Worked in a team of 8 working in an agile environment using a mix of Scrum and Kanban methodologies",
       "description": [
-        "Built a brand new API management portal named TSDL (Target Service Data Layer).",
+        "Built a brand new API management platform named TSDL (Target Service Data Layer).",
         "It provides a self-service portal to create, manage, and monitor APIs and includes features like API creation, documentation, compliency testing, and analytics.",
         "It supports OpenAPI, AsyncApi, Protobuff, GraphQL and dataset contracts."
       ],
@@ -61,7 +61,7 @@
     },
     {
       "position": {
-        "title": "Cloud DevOps engineer",
+        "title": "CloudOps",
         "company": "Arondor"
       },
       "location": "Paris",
@@ -118,7 +118,7 @@
     },
     {
       "position": {
-        "title": "Software engineer",
+        "title": "Software engineer Intern",
         "company": "Arondor"
       },
       "location": "Paris",
