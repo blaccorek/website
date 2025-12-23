@@ -8,7 +8,7 @@ type Experience = {
     position: Position;
     startDate: string;
     finishDate?: string;
-    description: string;
+    description: string | string[];
     environment?: string;
     missions: string[];
     technologies: string[];
