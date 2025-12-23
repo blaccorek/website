@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import { Heading, Img, Li, List } from 'flowbite-svelte';
 
     interface Expertise {
@@ -15,7 +16,7 @@
 <article class={articleClasses + ' flex mb-8 place-content-between gap-4'}>
     <div class="flex">
         <Img
-            src={image}
+            src={image ? resolve(image, {}) : undefined}
             alt={title}
             class="max-w-sm aspect-3/2 object-contain"
         />
