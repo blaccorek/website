@@ -12,5 +12,6 @@
     src={icon}
     href={url}
     class="bg-white dark:bg-gray-800"
+    alt={name}
 />
 <Tooltip placement="bottom">{name}</Tooltip>
