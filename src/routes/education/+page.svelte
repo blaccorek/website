@@ -7,6 +7,16 @@
     const { data }: PageProps = $props();
 </script>
 
+<svelte:head>
+    <title>
+        Tsiorintsoa ANDRIAMIHAMINA - DevOps Consultant - Education &
+        Certifications
+    </title>
+    <meta
+        name="description"
+        content="Showcasing the educational background and certifications of Tsiorintsoa Andriamihamina, a DevOps consultant specializing in GitOps, Kubernetes platforms, and modern web development."
+    />
+</svelte:head>
 <article class="p-8">
     <section>
         <Heading tag="h2" class="p-4">Education & Certifications</Heading>

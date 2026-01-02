@@ -3,6 +3,17 @@
     import { A, Blockquote, Heading, Hr, Li, List, P } from 'flowbite-svelte';
 </script>
 
+<svelte:head>
+    <title>Tsiorintsoa ANDRIAMIHAMINA - DevOps Consultant</title>
+    <meta
+        name="description"
+        content="DevOps consultant and full-stack engineer specializing in GitOps, Kubernetes platforms, and modern web development. Showcasing expertise in automation, developer experience, and high-quality delivery across cloud-native systems."
+    />
+    <meta
+        name="keywords"
+        content="DevOps, GitOps, Kubernetes, Full-Stack Development, CI/CD, Automation, Cloud-Native, Developer Experience, Software Delivery, Infrastructure as Code"
+    />
+</svelte:head>
 <main class="p-8">
     <section>
         <P size="3xl" weight="bold">Hello,</P>
@@ -15,12 +26,12 @@
                 My job is to help teams build software with confidence.
                 <br />
                 As a DevOps consultant and Full Stack developer, I blend engineering
-                rigor with a product‑driven mindset to create platforms that are fast,
+                rigor with a product-driven mindset to create platforms that are fast,
                 reliable, and built for scale.
             </P>
             <P size="xl" weight="semibold" class="mt-4 mb-8 pl-4">
                 I specialize in turning complex infrastructures into clean,
-                GitOps‑driven systems, and transforming delivery pipelines into
+                GitOps-driven systems, and transforming delivery pipelines into
                 smooth, predictable workflows. My work sits at the intersection
                 of development, operations, and developer experience — where
                 great products truly come to life.
@@ -37,7 +48,7 @@
     <section class="space-y-8">
         <Heading tag="h2">My Domains of Expertise</Heading>
         <Expertise
-            title="GitOps‑Driven Infrastructure Management"
+            title="GitOps-Driven Infrastructure Management"
             image="/images/expertise/gitops.png"
             items={[
                 'Designing and operating Kubernetes platforms using GitOps principles',
@@ -52,17 +63,17 @@
             image="/images/expertise/delivery-optimization.png"
             items={[
                 'Streamlining and improving CI/CD pipelines',
-                'Reducing lead time and accelerating time‑to‑market',
+                'Reducing lead time and accelerating time-to-market',
                 'Implementing Platform Engineering practices to empower development teams',
-                'Supporting organizations in building a mature, high‑performance DevOps culture'
+                'Supporting organizations in building a mature, high-performance DevOps culture'
             ]}
         />
         <Expertise
-            title="Full‑Stack Development"
+            title="Full-Stack Development"
             image="/images/expertise/full-stack.png"
             items={[
                 'Designing and developing modern web applications',
-                'Mastering both front‑end and back‑end architectures',
+                'Mastering both front-end and back-end architectures',
                 'Implementing CI/CD practices, automated testing, and clean development workflows',
                 'Collaborating with product and design teams to deliver robust, scalable features'
             ]}
