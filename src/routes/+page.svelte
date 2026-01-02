@@ -19,7 +19,11 @@
         <P size="3xl" weight="bold">Hello,</P>
         <P size="2xl" weight="semibold" class="mt-4 mb-8 pl-4">
             I'm Tsiorintsoa Andriamihamina and I work as a DevOps consultant for
-            <A href="https://www.shodops.io/">Shodops</A>.
+            <A
+                href="https://www.shodops.io/"
+                target="_blank"
+                rel="noopener noreferrer">Shodops</A
+            >.
         </P>
         <Blockquote border bg class="my-4 p-4">
             <P size="xl" weight="semibold" class="mt-4 mb-8 pl-4">
