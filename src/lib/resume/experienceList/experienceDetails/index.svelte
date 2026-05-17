@@ -1,9 +1,13 @@
 <script lang="ts">
+    import TechnologyIcon from '$lib/molecules/technologyIcon/index.svelte';
     import { toCamelCase } from '$lib/string';
     import { List, P, TimelineItem } from 'flowbite-svelte';
     import { BriefcaseOutline } from 'flowbite-svelte-icons';
 
-    import TechnologyIcon from './technologyIcon.svelte';
+    import {
+        type DetailedTechnologiesExperience,
+        buildTitle
+    } from './experienceDetails.svelte';
 
     const {
         startDate,
@@ -15,25 +19,16 @@
         technologies
     }: DetailedTechnologiesExperience = $props();
 
-    const buildTitle = ({ title, company, client }: Position) => {
-        let str = `${title} at ${client ?? company}`;
-        if (client) {
-            str = `Consultant - ${str} (for ${company})`;
-        }
-        return str;
-    };
-
     const title = $derived(buildTitle(position));
+    const dateRange = $derived(
+        `${toCamelCase(startDate)} - ${toCamelCase(finishDate ?? 'now')}`
+    );
 </script>
 
-<TimelineItem
-    {title}
-    date={`${toCamelCase(startDate)} - ${toCamelCase(finishDate ?? 'now')}`}
-    class="px-2"
->
+<TimelineItem {title} date={dateRange} class="px-2">
     {#snippet orientationSlot()}
         <span
-            class="bg-gray-200 dark:bg-primary-900 absolute -start-5 flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white dark:ring-gray-900"
+            class="bg-gray-200 dark:bg-primary-900 ring-white dark:ring-gray-900 absolute -start-5 flex h-8 w-8 items-center justify-center rounded-full ring-8"
         >
             <BriefcaseOutline
                 class="text-primary-600 dark:text-primary-400 h-6 w-6"
@@ -70,7 +65,7 @@
 
             <dt class="font-semibold">Technologies</dt>
             <dd>
-                <List tag="dl" class="flex gap-2 py-2 flex-wrap px-8">
+                <List tag="dl" class="flex flex-wrap gap-2 px-8 py-2">
                     {#each technologies as technology}
                         <li>
                             <TechnologyIcon

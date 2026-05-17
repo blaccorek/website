@@ -2,23 +2,18 @@
     import { resolve } from '$app/paths';
     import { Heading, Img, Li, List } from 'flowbite-svelte';
 
-    interface Expertise {
-        title: string;
-        image?: string;
-        left?: boolean;
-        items?: string[];
-    }
+    import type { ExpertiseProps } from './expertise.svelte';
 
-    const { title, image, left, items }: Expertise = $props();
-    const articleClasses = $derived(left ? 'flex-row' : 'flex-row-reverse');
+    const { title, image, left, items }: ExpertiseProps = $props();
+    const layoutClasses = $derived(left ? 'flex-row' : 'flex-row-reverse');
 </script>
 
-<article class={articleClasses + ' flex mb-8 place-content-between gap-4'}>
+<article class={layoutClasses + ' mb-8 flex place-content-between gap-4'}>
     <div class="flex">
         <Img
             src={image ? resolve(image, {}) : undefined}
             alt={title}
-            class="max-w-sm aspect-3/2 object-contain"
+            class="aspect-3/2 max-w-sm object-contain"
         />
     </div>
     <div class="flex">
@@ -27,8 +22,8 @@
                 {title}
             </Heading>
             <section>
-                <List tag="ul" class="pl-8 space-y-2">
-                    {#each items as item}
+                <List tag="ul" class="space-y-2 pl-8">
+                    {#each items ?? [] as item}
                         <Li class="md:text-lg lg:text-xl">
                             {item}
                         </Li>

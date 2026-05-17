@@ -1,7 +1,7 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
-    import Footer from '$lib/app/footer/index.svelte';
-    import Identity from '$lib/resume/identity/index.svelte';
+    import Footer from '$lib/molecules/footer/index.svelte';
+    import Identity from '$lib/molecules/identity/index.svelte';
     import { Listgroup } from 'flowbite-svelte';
 
     import '../app.css';
