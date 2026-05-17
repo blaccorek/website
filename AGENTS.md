@@ -8,7 +8,8 @@ before making changes, alongside the architectural decisions in
 
 Personal CV / portfolio site for Tsiorintsoa Andriamihamina (DevOps consultant).
 
-- **Framework**: SvelteKit 2 + Svelte 5 (runes API — `$props`, `$derived`, `$state`)
+- **Framework**: SvelteKit 2 + Svelte 5 (runes API — `$props`, `$derived`,
+  `$state`)
 - **Adapter**: `@sveltejs/adapter-static`, fully prerendered
   ([ADR-0003](docs/adr/0003-static-prerendered-site.md))
 - **Styling**: Tailwind CSS 4 + Flowbite Svelte
@@ -33,65 +34,68 @@ The ones that affect day-to-day work:
   `<name>.test.ts`.
 - [ADR-0003 — Static prerendered site](docs/adr/0003-static-prerendered-site.md):
   no runtime backend; all data resolves at build time.
-- [ADR-0004 — JSON content](docs/adr/0004-json-content-source.md): content
-  lives in `src/lib/data/*.json`, loaded via `+page.ts`.
+- [ADR-0004 — JSON content](docs/adr/0004-json-content-source.md): content lives
+  in `src/lib/data/*.json`, loaded via `+page.ts`.
 - [ADR-0005 — Flowbite primitives](docs/adr/0005-flowbite-svelte-primitives.md):
   don't reinvent components Flowbite already provides.
 - [ADR-0006 — Test strategy](docs/adr/0006-test-strategy.md): Vitest co-located
   for pure logic; Playwright in [tests/](tests/) with role-based queries.
 
-Before contradicting an ADR, supersede it with a new one instead of
-silently working around it.
+Before contradicting an ADR, supersede it with a new one instead of silently
+working around it.
 
 ## 3. Clean code guidelines
 
 - **Names earn comments**. Prefer a descriptive identifier over a comment
-  explaining a vague one. Only write a comment when the *why* is non-obvious
-  (a workaround, a constraint, a subtle invariant).
-- **Pure helpers in `.ts` files**. Anything expressible without Svelte
-  (string formatting, date logic, data shaping) lives in a `.ts` or
-  `.svelte.ts` file and is unit-tested.
+  explaining a vague one. Only write a comment when the _why_ is non-obvious (a
+  workaround, a constraint, a subtle invariant).
+- **Pure helpers in `.ts` files**. Anything expressible without Svelte (string
+  formatting, date logic, data shaping) lives in a `.ts` or `.svelte.ts` file
+  and is unit-tested.
 - **`$derived` over manual reactivity**. Compute view-state with `$derived`;
   don't mutate `$state` in response to props.
 - **Props are typed and destructured**:
-  ```ts
-  interface Props { firstname: string; lastname: string; jobTitle: string; }
-  const { firstname, lastname, jobTitle }: Props = $props();
-  ```
-- **No dead code**. Don't leave commented-out blocks, `console.log`, or
-  unowned TODOs.
+    ```ts
+    interface Props {
+        firstname: string;
+        lastname: string;
+        jobTitle: string;
+    }
+    const { firstname, lastname, jobTitle }: Props = $props();
+    ```
+- **No dead code**. Don't leave commented-out blocks, `console.log`, or unowned
+  TODOs.
 - **No premature abstraction**. Three similar lines beat a one-use generic.
   Extract on the third occurrence, not the second.
-- **Imports**: ordered by `@trivago/prettier-plugin-sort-imports` —
-  `^svelte` first, then `^[./]`, with separation. Don't fight the formatter.
-- **Use `$lib` and `$app/paths`**. Never write `../../lib/...` or hardcode
-  the base path; use `resolve()` from `$app/paths` for static asset URLs.
-- **Accessibility is non-negotiable**. Every `<Img>` needs a meaningful
-  `alt`; every external link needs `rel="noopener noreferrer"`. Use
-  semantic headings in order (`h1` → `h2` → `h3`).
+- **Imports**: ordered by `@trivago/prettier-plugin-sort-imports` — `^svelte`
+  first, then `^[./]`, with separation. Don't fight the formatter.
+- **Use `$lib` and `$app/paths`**. Never write `../../lib/...` or hardcode the
+  base path; use `resolve()` from `$app/paths` for static asset URLs.
+- **Accessibility is non-negotiable**. Every `<Img>` needs a meaningful `alt`;
+  every external link needs `rel="noopener noreferrer"`. Use semantic headings
+  in order (`h1` → `h2` → `h3`).
 
 ## 4. TDD workflow
 
 Default to test-first. The tooling split is fixed by
 [ADR-0006](docs/adr/0006-test-strategy.md); the workflow itself:
 
-1. **Pick the seam**. Pure logic → Vitest unit test. UI behaviour the user
-   sees → Playwright test. If UI logic is complex enough to warrant a test
-   on its own, *extract it* into a `.svelte.ts` helper and unit-test the
-   helper.
+1. **Pick the seam**. Pure logic → Vitest unit test. UI behaviour the user sees
+   → Playwright test. If UI logic is complex enough to warrant a test on its
+   own, _extract it_ into a `.svelte.ts` helper and unit-test the helper.
 2. **Red**: write the failing test first. Unit tests next to the source as
    `*.test.ts`; UI specs under [tests/](tests/).
 3. **Green**: implement the smallest change that turns the test green.
-4. **Refactor**: clean up names, extract helpers, delete duplication — with
-   the test still green.
+4. **Refactor**: clean up names, extract helpers, delete duplication — with the
+   test still green.
 
 What to unit-test in this repo: string / date formatters (`toCamelCase`,
 `buildDate`, `buildTitle`), data-mapping logic, branching fallbacks (e.g.
 `degree || programType`).
 
 What to UI-test: page `<title>`, primary headings, links by role, and any
-visible behaviour a visitor relies on. Parameterise with a loop for
-table-driven cases (see [tests/navigation.test.ts](tests/navigation.test.ts)).
+visible behaviour a visitor relies on. Parameterise with a loop for table-driven
+cases (see [tests/navigation.test.ts](tests/navigation.test.ts)).
 
 ## 5. Adding a new component
 
@@ -100,22 +104,23 @@ table-driven cases (see [tests/navigation.test.ts](tests/navigation.test.ts)).
 2. Create `src/lib/<layer>/<name>/index.svelte` and, if needed,
    `<name>.svelte.ts` for types and pure helpers
    ([ADR-0002](docs/adr/0002-component-folder-layout.md)).
-3. **Red**: write `<name>.test.ts` for any helper, and a Playwright spec
-   for any user-visible behaviour the component introduces.
+3. **Red**: write `<name>.test.ts` for any helper, and a Playwright spec for any
+   user-visible behaviour the component introduces.
 4. **Green**: implement using `$props()`, `$derived`, and typed interfaces.
 5. **Refactor**: collapse duplication, run `npm run format`.
-6. Consume it from the page or higher-layer component — never let a lower
-   layer reach upward.
+6. Consume it from the page or higher-layer component — never let a lower layer
+   reach upward.
 
 ## 6. Adding a new route
 
-1. Create `src/routes/<slug>/+page.svelte` and (if it needs data)
-   `+page.ts` returning typed data from [src/lib/data/](src/lib/data/).
+1. Create `src/routes/<slug>/+page.svelte` and (if it needs data) `+page.ts`
+   returning typed data from [src/lib/data/](src/lib/data/).
 2. Add a `<svelte:head>` with route-specific `<title>` and
    `<meta name="description">` — SEO is part of "done" here.
-3. Add the route to `menuItems` in [src/routes/+layout.ts](src/routes/+layout.ts).
-4. Add a Playwright spec under [tests/](tests/) that loads the route and
-   asserts its heading + that the nav link reaches it.
+3. Add the route to `menuItems` in
+   [src/routes/+layout.ts](src/routes/+layout.ts).
+4. Add a Playwright spec under [tests/](tests/) that loads the route and asserts
+   its heading + that the nav link reaches it.
 
 ## 7. Commands
 
@@ -128,9 +133,9 @@ npm run lint              # prettier + eslint
 npm run format            # prettier --write
 ```
 
-Before declaring work done: `npm run check && npm run lint && npm run test`
-must all pass. For any UI change, also exercise the flow in a browser
-(`npm run dev`) — type checks confirm correctness, not feature behaviour.
+Before declaring work done: `npm run check && npm run lint && npm run test` must
+all pass. For any UI change, also exercise the flow in a browser (`npm run dev`)
+— type checks confirm correctness, not feature behaviour.
 
 ## 8. Things to never do
 
@@ -138,8 +143,8 @@ must all pass. For any UI change, also exercise the flow in a browser
   [ADR-0003](docs/adr/0003-static-prerendered-site.md).
 - Don't add a new global CSS file; extend [src/app.css](src/app.css) or use
   Tailwind utilities.
-- Don't write a bespoke styled component for something Flowbite already
-  provides — see [ADR-0005](docs/adr/0005-flowbite-svelte-primitives.md).
+- Don't write a bespoke styled component for something Flowbite already provides
+  — see [ADR-0005](docs/adr/0005-flowbite-svelte-primitives.md).
 - Don't commit `console.log`, `.only` / `.skip` in tests, or unused imports.
-- Don't widen scope. A bug fix changes the minimum needed; a feature ships
-  its own tests.
+- Don't widen scope. A bug fix changes the minimum needed; a feature ships its
+  own tests.
