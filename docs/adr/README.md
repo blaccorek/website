@@ -9,14 +9,16 @@ Format:
 [Michael Nygard's template](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions)
 — **Status / Context / Decision / Consequences**.
 
-| #    | Title                                                                   | Status   |
-| ---- | ----------------------------------------------------------------------- | -------- |
-| 0001 | [Atomic design for component organization](0001-atomic-design.md)       | Accepted |
-| 0002 | [Co-located component folders](0002-component-folder-layout.md)         | Accepted |
-| 0003 | [Static prerendered SvelteKit site](0003-static-prerendered-site.md)    | Accepted |
-| 0004 | [JSON files as content source](0004-json-content-source.md)             | Accepted |
-| 0005 | [Flowbite Svelte for UI primitives](0005-flowbite-svelte-primitives.md) | Accepted |
-| 0006 | [Vitest + Playwright test split](0006-test-strategy.md)                 | Accepted |
+| #    | Title                                                                    | Status                                              |
+| ---- | ------------------------------------------------------------------------ | --------------------------------------------------- |
+| 0001 | [Atomic design for component organization](0001-atomic-design.md)        | Accepted                                            |
+| 0002 | [Co-located component folders](0002-component-folder-layout.md)          | Accepted                                            |
+| 0003 | [Static prerendered SvelteKit site](0003-static-prerendered-site.md)     | Accepted                                            |
+| 0004 | [JSON files as content source](0004-json-content-source.md)              | Accepted                                            |
+| 0005 | [Flowbite Svelte for UI primitives](0005-flowbite-svelte-primitives.md)  | Superseded by [0008](0008-own-component-library.md) |
+| 0006 | [Vitest + Playwright test split](0006-test-strategy.md)                  | Accepted                                            |
+| 0007 | [Logo-derived brand palette and page shell](0007-brand-design-system.md) | Accepted                                            |
+| 0008 | [Own component library](0008-own-component-library.md)                   | Accepted                                            |
 
 ## Writing a new ADR
 

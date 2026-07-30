@@ -12,8 +12,8 @@ Personal CV / portfolio site for Tsiorintsoa Andriamihamina (DevOps consultant).
   `$state`)
 - **Adapter**: `@sveltejs/adapter-static`, fully prerendered
   ([ADR-0003](docs/adr/0003-static-prerendered-site.md))
-- **Styling**: Tailwind CSS 4 + Flowbite Svelte
-  ([ADR-0005](docs/adr/0005-flowbite-svelte-primitives.md))
+- **Styling**: Tailwind CSS 4 + own atoms / molecules, no UI library
+  ([ADR-0008](docs/adr/0008-own-component-library.md))
 - **Content**: JSON files in [src/lib/data/](src/lib/data/)
   ([ADR-0004](docs/adr/0004-json-content-source.md))
 - **Language**: TypeScript (strict via `@tsconfig/svelte`)
@@ -36,10 +36,14 @@ The ones that affect day-to-day work:
   no runtime backend; all data resolves at build time.
 - [ADR-0004 — JSON content](docs/adr/0004-json-content-source.md): content lives
   in `src/lib/data/*.json`, loaded via `+page.ts`.
-- [ADR-0005 — Flowbite primitives](docs/adr/0005-flowbite-svelte-primitives.md):
-  don't reinvent components Flowbite already provides.
 - [ADR-0006 — Test strategy](docs/adr/0006-test-strategy.md): Vitest co-located
   for pure logic; Playwright in [tests/](tests/) with role-based queries.
+- [ADR-0007 — Brand design system](docs/adr/0007-brand-design-system.md): the
+  logo-derived `primary` / `secondary` palettes in [src/app.css](src/app.css)
+  are the only source of colour; the layout owns the page shell.
+- [ADR-0008 — Own component library](docs/adr/0008-own-component-library.md):
+  primitives live in `src/lib/atoms/`; variants are named unions resolved by a
+  pure helper, not free-form class overrides. Supersedes ADR-0005 (Flowbite).
 
 Before contradicting an ADR, supersede it with a new one instead of silently
 working around it.
@@ -71,8 +75,10 @@ working around it.
   first, then `^[./]`, with separation. Don't fight the formatter.
 - **Use `$lib` and `$app/paths`**. Never write `../../lib/...` or hardcode the
   base path; use `resolve()` from `$app/paths` for static asset URLs.
-- **Accessibility is non-negotiable**. Every `<Img>` needs a meaningful `alt`;
-  every external link needs `rel="noopener noreferrer"`. Use semantic headings
+- **Accessibility is non-negotiable**. Every image needs a meaningful `alt` — or
+  `alt=""` when it is decorative and the adjacent text already names it
+  (technology chips, expertise illustrations). External links need
+  `rel="noopener noreferrer"` (the `link` atom adds it). Use semantic headings
   in order (`h1` → `h2` → `h3`).
 
 ## 4. TDD workflow
@@ -126,7 +132,8 @@ cases (see [tests/navigation.test.ts](tests/navigation.test.ts)).
 
 ```bash
 npm run test              # integration then unit
-npm run test:unit         # vitest, watch mode
+npm run test:unit         # vitest, single run
+npm run test:unit:watch   # vitest, watch mode
 npm run test:integration  # playwright
 npm run check             # svelte-check (type errors)
 npm run lint              # prettier + eslint
@@ -143,8 +150,12 @@ all pass. For any UI change, also exercise the flow in a browser (`npm run dev`)
   [ADR-0003](docs/adr/0003-static-prerendered-site.md).
 - Don't add a new global CSS file; extend [src/app.css](src/app.css) or use
   Tailwind utilities.
-- Don't write a bespoke styled component for something Flowbite already provides
-  — see [ADR-0005](docs/adr/0005-flowbite-svelte-primitives.md).
+- Don't hardcode a colour. Use `primary-*` / `secondary-*` / `gray-*` utilities,
+  with a `dark:` counterpart on every surface — see
+  [ADR-0007](docs/adr/0007-brand-design-system.md).
+- Don't add a UI component library back, and don't hand-roll markup for
+  something `src/lib/atoms/` already covers — see
+  [ADR-0008](docs/adr/0008-own-component-library.md).
 - Don't commit `console.log`, `.only` / `.skip` in tests, or unused imports.
 - Don't widen scope. A bug fix changes the minimum needed; a feature ships its
   own tests.

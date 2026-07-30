@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Heading from '$lib/atoms/heading/index.svelte';
     import ExperienceList from '$lib/resume/experienceList/index.svelte';
-    import { Heading } from 'flowbite-svelte';
 
     import type { PageProps } from './$types';
 
@@ -16,12 +16,10 @@
         content="Showcasing the work experience of Tsiorintsoa Andriamihamina, a DevOps consultant specializing in GitOps, Kubernetes platforms, and modern web development."
     />
 </svelte:head>
-<article class="p-8">
-    <section>
-        <Heading tag="h2" class="p-4">Work Experience</Heading>
-        <ExperienceList
-            experiences={data.experiences}
-            technologies={data.technologies}
-        />
-    </section>
-</article>
+<section class="space-y-10">
+    <Heading level={2}>Work Experience</Heading>
+    <ExperienceList
+        experiences={data.experiences}
+        technologies={data.technologies}
+    />
+</section>

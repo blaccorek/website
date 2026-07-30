@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Heading from '$lib/atoms/heading/index.svelte';
     import EducationList from '$lib/resume/educationList/index.svelte';
-    import { Heading } from 'flowbite-svelte';
 
     import type { PageProps } from './$types';
 
@@ -17,9 +17,7 @@
         content="Showcasing the educational background and certifications of Tsiorintsoa Andriamihamina, a DevOps consultant specializing in GitOps, Kubernetes platforms, and modern web development."
     />
 </svelte:head>
-<article class="p-8">
-    <section>
-        <Heading tag="h2" class="p-4">Education & Certifications</Heading>
-        <EducationList schools={data.schools} />
-    </section>
-</article>
+<section class="space-y-10">
+    <Heading level={2}>Education & Certifications</Heading>
+    <EducationList schools={data.schools} />
+</section>

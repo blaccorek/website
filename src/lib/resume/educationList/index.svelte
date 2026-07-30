@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Timeline } from 'flowbite-svelte';
+    import Timeline from '$lib/molecules/timeline/index.svelte';
 
     import SchoolDetails from './schoolDetails/index.svelte';
     import type { School } from './schoolDetails/schoolDetails.svelte';
@@ -11,8 +11,8 @@
     const { schools }: EducationListProps = $props();
 </script>
 
-<Timeline order="vertical">
-    {#each schools as school}
+<Timeline>
+    {#each schools as school, index (index)}
         <SchoolDetails {...school} />
     {/each}
 </Timeline>

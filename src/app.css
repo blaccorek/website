@@ -1,39 +1,47 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
 
-@plugin 'flowbite/plugin';
-
-@custom-variant dark (&:where(.dark, .dark *));
+/* Dark styling follows the OS preference, and can be forced with a `.dark`
+   ancestor (or opted out of with a `.light` ancestor). */
+@custom-variant dark {
+    &:where(.dark, .dark *) {
+        @slot;
+    }
+    @media (prefers-color-scheme: dark) {
+        &:where(:not(.light, .light *)) {
+            @slot;
+        }
+    }
+}
 
 @theme {
-    /* Primary (Teal) palette */
-    --color-primary-50: #f0fdfa;
-    --color-primary-100: #ccfbf1;
-    --color-primary-200: #99f6e4;
-    --color-primary-300: #5eead4;
-    --color-primary-400: #2dd4bf;
-    --color-primary-500: #14b8a6;
-    --color-primary-600: #0d9488;
-    --color-primary-700: #0f766e;
-    --color-primary-800: #115e59;
-    --color-primary-900: #134e4a;
-    --text-primary-light: #134e4a;
-    --text-primary-dark: #f0fdfa;
+    /* Primary palette, derived from the logo green #00c26c (see ADR-0007).
+       600 and 700 stay dark enough for text on white; 300 and 400 for text on
+       the dark surfaces. */
+    --color-primary-50: #ecfdf3;
+    --color-primary-100: #d0fae2;
+    --color-primary-200: #a0f4c8;
+    --color-primary-300: #63eaa8;
+    --color-primary-400: #16cf83;
+    --color-primary-500: #00c26c;
+    --color-primary-600: #00a05a;
+    --color-primary-700: #007f48;
+    --color-primary-800: #00623a;
+    --color-primary-900: #05502f;
+    --color-primary-950: #002d1b;
 
-    /* Secondary (Green) palette */
-    --color-secondary-50: #f0fdf4;
-    --color-secondary-100: #dcfce7;
-    --color-secondary-200: #bbf7d0;
-    --color-secondary-300: #86efac;
-    --color-secondary-400: #4ade80;
-    --color-secondary-500: #22c55e;
-    --color-secondary-600: #16a34a;
-    --color-secondary-700: #15803d;
-    --color-secondary-800: #166534;
-    --color-secondary-900: #14532d;
-    --text-secondary-light: #14532d;
-    --text-secondary-dark: #f0fdf4;
+    /* Secondary palette: the logo's ink, for accents that must not compete
+       with the green. */
+    --color-secondary-50: #f5f7f7;
+    --color-secondary-100: #e6ebea;
+    --color-secondary-200: #ccd5d3;
+    --color-secondary-300: #a7b5b2;
+    --color-secondary-400: #7b8b88;
+    --color-secondary-500: #5c6c69;
+    --color-secondary-600: #485654;
+    --color-secondary-700: #3b4644;
+    --color-secondary-800: #283030;
+    --color-secondary-900: #171e1e;
+    --color-secondary-950: #0c1111;
 
     /* Gray palette */
     --color-gray-50: #f9fafb;
@@ -46,8 +54,7 @@
     --color-gray-700: #374151;
     --color-gray-800: #1f2937;
     --color-gray-900: #111827;
-    --text-gray-light: #111827;
-    --text-gray-dark: #f9fafb;
+    --color-gray-950: #080d16;
 
     /* Yellow palette */
     --color-yellow-50: #fefce8;
@@ -60,16 +67,26 @@
     --color-yellow-700: #a16207;
     --color-yellow-800: #854d0e;
     --color-yellow-900: #713f12;
-    --text-yellow-light: #713f12;
-    --text-yellow-dark: #fefce8;
 }
 
-@source "../node_modules/flowbite-svelte/dist";
-@source "../node_modules/flowbite-svelte-icons/dist";
-
 @layer base {
-    /* disable chrome cancel button */
-    input[type='search']::-webkit-search-cancel-button {
-        display: none;
+    ::selection {
+        background-color: var(--color-primary-200);
+        color: var(--color-primary-900);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-primary-500);
+        outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
     }
 }

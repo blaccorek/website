@@ -2,7 +2,7 @@
     import { resolve } from '$app/paths';
     import Footer from '$lib/molecules/footer/index.svelte';
     import Identity from '$lib/molecules/identity/index.svelte';
-    import { Listgroup } from 'flowbite-svelte';
+    import NavBar from '$lib/molecules/navBar/index.svelte';
 
     import '../app.css';
     import type { LayoutProps } from './$types';
@@ -10,35 +10,36 @@
     let { data, children }: LayoutProps = $props();
     const links = $derived(
         data?.menuItems.map((item) => ({
-            name: item.title,
+            title: item.title,
             href: resolve(item.href, {}),
             current: item.href == data?.currentPage
         })) ?? []
     );
 </script>
 
-<div class="min-h-screen flex flex-col">
+<div class="flex min-h-screen flex-col">
+    <a
+        href="#content"
+        class="bg-primary-700 sr-only rounded-b-lg px-4 py-2 text-white focus:not-sr-only focus:absolute focus:start-4 focus:top-0 focus:z-30"
+    >
+        Skip to content
+    </a>
+
     <Identity
         firstname="Tsiorintsoa"
         lastname="Andriamihamina"
         jobTitle="DevOps consultant"
     />
-    <main
-        class="bg-white dark:bg-gray-800
-            h-full flex-grow
-            2xl:w-1/2 lg:w-4/5 w-full
-            justify-center
-            mx-auto shadow-md rounded-md my-4"
-    >
-        <div class="flex justify-center p-8">
-            <Listgroup
-                active
-                items={links}
-                horizontal
-                class="w-1/2 md:w-full max-w-2xl"
-            ></Listgroup>
-        </div>
-        {@render children()}
-    </main>
+    <NavBar items={links} />
+
+    <div class="mx-auto w-full max-w-5xl flex-grow px-4 py-10 sm:px-6 lg:px-8">
+        <main
+            id="content"
+            class="h-full rounded-2xl border border-gray-200 bg-white px-5 py-8 shadow-sm sm:px-8 sm:py-10 lg:px-12 lg:py-14 dark:border-gray-800 dark:bg-gray-900"
+        >
+            {@render children()}
+        </main>
+    </div>
+
     <Footer />
 </div>

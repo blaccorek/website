@@ -9,11 +9,9 @@
     "tabWidth": 4,
     "plugins": [
         "prettier-plugin-svelte",
-        "prettier-plugin-organize-imports",
         "prettier-plugin-tailwindcss",
         "@trivago/prettier-plugin-sort-imports"
     ],
-    "tailwindConfig": "tailwind.config.js",
     "tailwindFunctions": ["clsx", "classnames", "cva"],
     "tailwindAttributes": ["class", "className"],
     "overrides": [

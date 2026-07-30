@@ -1,4 +1,4 @@
-import type { TechnologyDetails } from '$lib/molecules/technologyIcon/technologyIcon.svelte';
+import type { TechnologyDetails } from '$lib/molecules/technologyChip/technologyChip.svelte';
 
 import type {
     DetailedTechnologiesExperience,
