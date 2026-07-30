@@ -40,6 +40,9 @@ The ones that affect day-to-day work:
   don't reinvent components Flowbite already provides.
 - [ADR-0006 — Test strategy](docs/adr/0006-test-strategy.md): Vitest co-located
   for pure logic; Playwright in [tests/](tests/) with role-based queries.
+- [ADR-0007 — Brand design system](docs/adr/0007-brand-design-system.md): the
+  logo-derived `primary` / `secondary` palettes in [src/app.css](src/app.css)
+  are the only source of colour; the layout owns the page shell.
 
 Before contradicting an ADR, supersede it with a new one instead of silently
 working around it.
@@ -143,6 +146,9 @@ all pass. For any UI change, also exercise the flow in a browser (`npm run dev`)
   [ADR-0003](docs/adr/0003-static-prerendered-site.md).
 - Don't add a new global CSS file; extend [src/app.css](src/app.css) or use
   Tailwind utilities.
+- Don't hardcode a colour. Use `primary-*` / `secondary-*` / `gray-*` utilities,
+  with a `dark:` counterpart on every surface — see
+  [ADR-0007](docs/adr/0007-brand-design-system.md).
 - Don't write a bespoke styled component for something Flowbite already provides
   — see [ADR-0005](docs/adr/0005-flowbite-svelte-primitives.md).
 - Don't commit `console.log`, `.only` / `.skip` in tests, or unused imports.
