@@ -19,53 +19,63 @@
         technologies
     }: DetailedTechnologiesExperience = $props();
 
+    const sectionLabelClasses =
+        'text-primary-700 dark:text-primary-400 text-xs font-semibold tracking-widest uppercase';
     const title = $derived(buildTitle(position));
     const dateRange = $derived(
         `${toCamelCase(startDate)} - ${toCamelCase(finishDate ?? 'now')}`
     );
 </script>
 
-<TimelineItem {title} date={dateRange} class="px-2">
+<TimelineItem {title} date={dateRange} class="mb-12">
     {#snippet orientationSlot()}
         <span
-            class="bg-gray-200 dark:bg-primary-900 ring-white dark:ring-gray-900 absolute -start-5 flex h-8 w-8 items-center justify-center rounded-full ring-8"
+            class="bg-primary-100 dark:bg-primary-900 ring-white dark:ring-gray-900 absolute -start-5 flex h-8 w-8 items-center justify-center rounded-full ring-8"
         >
             <BriefcaseOutline
-                class="text-primary-600 dark:text-primary-400 h-6 w-6"
+                class="text-primary-700 dark:text-primary-400 h-6 w-6"
             />
         </span>
     {/snippet}
 
-    <section>
-        <dl>
-            <dt class="font-semibold">Description</dt>
-            <dd class="px-8">
+    <section class="mt-3 ms-4">
+        <dl class="space-y-4">
+            <dt class={sectionLabelClasses}>Description</dt>
+            <dd class="space-y-1 ps-4">
                 {#if Array.isArray(description)}
                     {#each description as desc}
-                        <P class="mb-1">{desc}</P>
+                        <P class="text-gray-700 dark:text-gray-300">{desc}</P>
                     {/each}
                 {:else}
-                    <P>{description}</P>
+                    <P class="text-gray-700 dark:text-gray-300">
+                        {description}
+                    </P>
                 {/if}
             </dd>
 
             {#if environment}
-                <dt class="font-semibold">Environment</dt>
-                <dd class="px-8">{environment}</dd>
+                <dt class={sectionLabelClasses}>Environment</dt>
+                <dd class="ps-4 text-gray-700 dark:text-gray-300">
+                    {environment}
+                </dd>
             {/if}
 
-            <dt class="font-semibold">Missions</dt>
+            <dt class={sectionLabelClasses}>Missions</dt>
             <dd>
-                <List tag="ul" class="pl-8">
+                <List
+                    tag="ul"
+                    position="outside"
+                    class="marker:text-primary-500 space-y-1 ps-8 text-gray-700 dark:text-gray-300"
+                >
                     {#each missions as mission}
                         <li>{mission}</li>
                     {/each}
                 </List>
             </dd>
 
-            <dt class="font-semibold">Technologies</dt>
+            <dt class={sectionLabelClasses}>Technologies</dt>
             <dd>
-                <List tag="dl" class="flex flex-wrap gap-2 px-8 py-2">
+                <List tag="dl" class="flex flex-wrap gap-3 ps-4 pt-1">
                     {#each technologies as technology}
                         <li>
                             <TechnologyIcon

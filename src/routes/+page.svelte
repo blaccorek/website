@@ -1,6 +1,6 @@
 <script lang="ts">
     import Expertise from '$lib/resume/expertise/index.svelte';
-    import { A, Blockquote, Heading, Hr, Li, List, P } from 'flowbite-svelte';
+    import { A, Blockquote, Heading, P } from 'flowbite-svelte';
 </script>
 
 <svelte:head>
@@ -14,33 +14,52 @@
         content="DevOps, GitOps, Kubernetes, Full-Stack Development, CI/CD, Automation, Cloud-Native, Developer Experience, Software Delivery, Infrastructure as Code"
     />
 </svelte:head>
-<main class="p-8">
-    <section>
+<div class="space-y-14">
+    <section class="space-y-6">
         <P size="3xl" weight="bold">Hello,</P>
-        <P size="2xl" weight="semibold" class="mt-4 mb-8 pl-4">
+        <P size="xl" weight="medium" class="text-gray-700 dark:text-gray-200">
             I'm Tsiorintsoa Andriamihamina and I work as a DevOps consultant for
             <A
                 href="https://www.shodops.io/"
                 target="_blank"
-                rel="noopener noreferrer">Shodops</A
+                rel="noopener noreferrer"
+                class="text-primary-700 dark:text-primary-400 font-semibold"
+                >Shodops</A
             >.
         </P>
-        <Blockquote border bg class="my-4 p-4">
-            <P size="xl" weight="semibold" class="mt-4 mb-8 pl-4">
+        <Blockquote
+            border
+            bg
+            italic={false}
+            class="border-primary-500 bg-primary-50 dark:bg-primary-900/20 space-y-4 rounded-e-lg p-6 sm:p-8"
+        >
+            <P
+                size="lg"
+                weight="normal"
+                class="text-gray-700 dark:text-gray-100"
+            >
                 My job is to help teams build software with confidence.
                 <br />
                 As a DevOps consultant and Full Stack developer, I blend engineering
                 rigor with a product-driven mindset to create platforms that are fast,
                 reliable, and built for scale.
             </P>
-            <P size="xl" weight="semibold" class="mt-4 mb-8 pl-4">
+            <P
+                size="lg"
+                weight="normal"
+                class="text-gray-700 dark:text-gray-100"
+            >
                 I specialize in turning complex infrastructures into clean,
                 GitOps-driven systems, and transforming delivery pipelines into
                 smooth, predictable workflows. My work sits at the intersection
                 of development, operations, and developer experience — where
                 great products truly come to life.
             </P>
-            <P size="xl" weight="semibold" class="mt-4 mb-8 pl-4">
+            <P
+                size="lg"
+                weight="normal"
+                class="text-gray-700 dark:text-gray-100"
+            >
                 I’m driven by clarity, automation, and continuous improvement.
                 <br />
                 <b>My mission:</b> empower teams to ship better software, faster,
@@ -48,9 +67,10 @@
             </P>
         </Blockquote>
     </section>
-    <Hr />
     <section class="space-y-8">
-        <Heading tag="h2">My Domains of Expertise</Heading>
+        <Heading tag="h2" class="text-2xl sm:text-3xl">
+            My Domains of Expertise
+        </Heading>
         <Expertise
             title="GitOps-Driven Infrastructure Management"
             image="/images/expertise/gitops.png"
@@ -83,4 +103,4 @@
             ]}
         />
     </section>
-</main>
+</div>

@@ -17,9 +17,9 @@
         content="Showcasing the educational background and certifications of Tsiorintsoa Andriamihamina, a DevOps consultant specializing in GitOps, Kubernetes platforms, and modern web development."
     />
 </svelte:head>
-<article class="p-8">
-    <section>
-        <Heading tag="h2" class="p-4">Education & Certifications</Heading>
-        <EducationList schools={data.schools} />
-    </section>
-</article>
+<section class="space-y-10">
+    <Heading tag="h2" class="text-2xl sm:text-3xl">
+        Education & Certifications
+    </Heading>
+    <EducationList schools={data.schools} />
+</section>

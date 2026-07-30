@@ -17,28 +17,29 @@
     );
 </script>
 
-<div class="min-h-screen flex flex-col">
+<div class="flex min-h-screen flex-col">
     <Identity
         firstname="Tsiorintsoa"
         lastname="Andriamihamina"
         jobTitle="DevOps consultant"
     />
-    <main
-        class="bg-white dark:bg-gray-800
-            h-full flex-grow
-            2xl:w-1/2 lg:w-4/5 w-full
-            justify-center
-            mx-auto shadow-md rounded-md my-4"
+    <nav
+        aria-label="Main"
+        class="mx-auto w-full max-w-5xl px-4 pb-6 sm:px-6 lg:px-8"
     >
-        <div class="flex justify-center p-8">
-            <Listgroup
-                active
-                items={links}
-                horizontal
-                class="w-1/2 md:w-full max-w-2xl"
-            ></Listgroup>
-        </div>
-        {@render children()}
-    </main>
+        <Listgroup
+            active
+            items={links}
+            class="mx-auto w-full max-w-2xl overflow-hidden shadow-xs sm:flex-row sm:divide-x sm:divide-y-0"
+            itemClass="justify-center px-4 py-3 text-center"
+        ></Listgroup>
+    </nav>
+    <div class="mx-auto w-full max-w-5xl flex-grow px-4 pb-12 sm:px-6 lg:px-8">
+        <main
+            class="h-full rounded-2xl border border-gray-200 bg-white px-5 py-8 shadow-sm sm:px-8 sm:py-10 lg:px-12 lg:py-14 dark:border-gray-800 dark:bg-gray-900"
+        >
+            {@render children()}
+        </main>
+    </div>
     <Footer />
 </div>
