@@ -20,7 +20,7 @@
 
 <li class="relative">
     <span
-        class="bg-primary-50 border-primary-200 dark:border-primary-800 dark:bg-primary-900/50 absolute -start-12 top-0 flex h-8 w-8 items-center justify-center rounded-full border ring-4 ring-gray-50 dark:ring-gray-950"
+        class="bg-primary-50 border-primary-200 dark:border-primary-700 dark:bg-primary-900/50 absolute -start-12 top-0 flex h-8 w-8 items-center justify-center rounded-full border ring-4 ring-white dark:ring-gray-900"
     >
         <Icon
             name={icon}
@@ -29,7 +29,7 @@
     </span>
 
     <article
-        class="hover:border-primary-300 dark:hover:border-primary-800 rounded-2xl border border-gray-200 bg-white p-5 transition-colors sm:p-6 dark:border-gray-800 dark:bg-gray-900"
+        class="hover:border-primary-300 dark:hover:border-primary-600 rounded-2xl border border-gray-200 bg-white p-5 transition-colors sm:p-6 dark:border-gray-700 dark:bg-gray-800"
     >
         <p
             class="text-primary-700 dark:text-primary-400 text-xs font-semibold tracking-widest uppercase"

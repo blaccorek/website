@@ -35,7 +35,7 @@
     <div class="mx-auto w-full max-w-5xl flex-grow px-4 py-10 sm:px-6 lg:px-8">
         <main
             id="content"
-            class="h-full rounded-2xl border border-gray-200 bg-white px-5 py-8 shadow-sm sm:px-8 sm:py-10 lg:px-12 lg:py-14 dark:border-gray-800 dark:bg-gray-900"
+            class="h-full rounded-2xl border border-gray-200 bg-white px-5 py-8 shadow-sm sm:px-8 sm:py-10 lg:px-12 lg:py-14 dark:border-gray-700 dark:bg-gray-900"
         >
             {@render children()}
         </main>

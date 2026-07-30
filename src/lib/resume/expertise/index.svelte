@@ -13,7 +13,7 @@
 </script>
 
 <article
-    class="{layoutClasses} hover:border-primary-300 dark:hover:border-primary-800 flex flex-col items-center gap-6 rounded-2xl border border-gray-200 bg-gray-50 p-5 transition-colors sm:gap-10 sm:p-8 dark:border-gray-800 dark:bg-gray-800/40"
+    class="{layoutClasses} hover:border-primary-300 dark:hover:border-primary-600 flex flex-col items-center gap-6 rounded-2xl border border-gray-200 bg-gray-50 p-5 transition-colors sm:gap-10 sm:p-8 dark:border-gray-700 dark:bg-gray-800"
 >
     {#if image}
         <Image
