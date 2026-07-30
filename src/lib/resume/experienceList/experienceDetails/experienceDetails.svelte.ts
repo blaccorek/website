@@ -1,4 +1,4 @@
-import type { Technology } from '$lib/molecules/technologyIcon/technologyIcon.svelte';
+import type { Technology } from '$lib/molecules/technologyChip/technologyChip.svelte';
 
 export type Position = {
     company: string | { name: string; url: string; description: string };

@@ -47,8 +47,8 @@ width, no page padding.
 
 **Global base rules over repeated utilities.** `::selection` and
 `:focus-visible` are styled once in `@layer base` so focus is visible on every
-interactive element, including the ones Flowbite renders
-([ADR-0005](0005-flowbite-svelte-primitives.md)).
+interactive element, whatever renders it, and a reduced-motion block neutralises
+transitions for visitors who ask for it.
 
 ## Consequences
 
@@ -66,6 +66,6 @@ interactive element, including the ones Flowbite renders
 - **`secondary` is currently near-unused**. It is defined so accents have
   somewhere to go that doesn't compete with the green; if it stays unused it
   should be deleted rather than kept "just in case".
-- **Flowbite's own palette assumptions leak**: components styled around
-  `primary-600` hover states inherit our green automatically, but a few need an
-  explicit class to reach the `700` text shade.
+- **The palette is only as good as its consumers**: with the components now
+  written in-repo ([ADR-0008](0008-own-component-library.md)), a shade chosen by
+  hand in one component is the failure mode to watch for in review.

@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Heading from '$lib/atoms/heading/index.svelte';
     import EducationList from '$lib/resume/educationList/index.svelte';
-    import { Heading } from 'flowbite-svelte';
 
     import type { PageProps } from './$types';
 
@@ -18,8 +18,6 @@
     />
 </svelte:head>
 <section class="space-y-10">
-    <Heading tag="h2" class="text-2xl sm:text-3xl">
-        Education & Certifications
-    </Heading>
+    <Heading level={2}>Education & Certifications</Heading>
     <EducationList schools={data.schools} />
 </section>

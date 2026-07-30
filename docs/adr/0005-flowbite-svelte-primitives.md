@@ -1,6 +1,6 @@
 # ADR-0005: Flowbite Svelte for UI primitives
 
-- **Status**: Accepted
+- **Status**: Superseded by [ADR-0008](0008-own-component-library.md)
 - **Date**: 2026-05-17
 
 ## Context

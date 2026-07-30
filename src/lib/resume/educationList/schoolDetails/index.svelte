@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { A, P, TimelineItem } from 'flowbite-svelte';
-    import { BadgeCheckSolid, GraduationCapSolid } from 'flowbite-svelte-icons';
+    import Link from '$lib/atoms/link/index.svelte';
+    import Text from '$lib/atoms/text/index.svelte';
+    import TimelineItem from '$lib/molecules/timeline/timelineItem/index.svelte';
 
     import {
         type School,
@@ -8,7 +9,6 @@
         selectGrant
     } from './schoolDetails.svelte';
 
-    const props: School = $props();
     const {
         name,
         description,
@@ -18,36 +18,27 @@
         startYear,
         endYear,
         hasValidity = false
-    } = props;
+    }: School = $props();
 
-    const grant = selectGrant({ degree, programType });
-    const date = buildDate({ startYear, endYear, hasValidity });
+    const grant = $derived(selectGrant({ degree, programType }));
+    const date = $derived(buildDate({ startYear, endYear, hasValidity }));
 </script>
 
-<TimelineItem title={grant} {date} dateFormat="year" class="mb-12">
-    {#snippet orientationSlot()}
-        <span
-            class="bg-primary-100 dark:bg-primary-900 ring-white dark:ring-gray-900 absolute -start-5 flex h-8 w-8 items-center justify-center rounded-full ring-8"
-        >
-            {#if degree}
-                <BadgeCheckSolid
-                    class="text-primary-700 dark:text-primary-400 h-6 w-6"
-                />
-            {:else}
-                <GraduationCapSolid
-                    class="text-primary-700 dark:text-primary-400 h-6 w-6"
-                />
-            {/if}
-        </span>
+<TimelineItem
+    title={grant}
+    {date}
+    icon={degree ? 'certificate' : 'graduationCap'}
+>
+    {#snippet subtitle()}
         {#if websiteUrl}
-            <A
-                href={websiteUrl}
-                class="text-primary-700 dark:text-primary-400 font-medium"
-                >{name}</A
-            >
+            <Link href={websiteUrl}>{name}</Link>
         {:else}
-            <span>{name}</span>
+            <span class="font-medium text-gray-600 dark:text-gray-300">
+                {name}
+            </span>
         {/if}
     {/snippet}
-    <P class="mt-2 ms-4 text-gray-700 dark:text-gray-300">{description}</P>
+    {#if description}
+        <Text>{description}</Text>
+    {/if}
 </TimelineItem>

@@ -16,6 +16,8 @@ export const selectGrant = (school: Pick<School, 'degree' | 'programType'>) =>
 
 export const buildDate = (
     school: Pick<School, 'startYear' | 'endYear' | 'hasValidity'>,
+    /* Read once at build time, never stored — no reactivity to preserve. */
+    // eslint-disable-next-line svelte/prefer-svelte-reactivity
     today: () => number = () => new Date().getFullYear()
 ): string => {
     const { startYear, endYear, hasValidity } = school;

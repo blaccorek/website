@@ -1,6 +1,6 @@
 <script lang="ts">
+    import Heading from '$lib/atoms/heading/index.svelte';
     import ExperienceList from '$lib/resume/experienceList/index.svelte';
-    import { Heading } from 'flowbite-svelte';
 
     import type { PageProps } from './$types';
 
@@ -17,7 +17,7 @@
     />
 </svelte:head>
 <section class="space-y-10">
-    <Heading tag="h2" class="text-2xl sm:text-3xl">Work Experience</Heading>
+    <Heading level={2}>Work Experience</Heading>
     <ExperienceList
         experiences={data.experiences}
         technologies={data.technologies}

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
-    import type { TechnologyDetails } from '$lib/molecules/technologyIcon/technologyIcon.svelte';
-    import { Timeline } from 'flowbite-svelte';
+    import type { TechnologyDetails } from '$lib/molecules/technologyChip/technologyChip.svelte';
+    import Timeline from '$lib/molecules/timeline/index.svelte';
 
     import type { Experience } from './experienceDetails/experienceDetails.svelte';
     import ExperienceDetails from './experienceDetails/index.svelte';
@@ -21,8 +21,8 @@
     );
 </script>
 
-<Timeline order="vertical">
-    {#each enrichedExperiences as experience}
+<Timeline>
+    {#each enrichedExperiences as experience, index (index)}
         <ExperienceDetails {...experience} />
     {/each}
 </Timeline>
