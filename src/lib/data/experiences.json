@@ -3,6 +3,40 @@
     {
       "position": {
         "title": "DevOps engineer",
+        "company": "Caprikorn"
+      },
+      "environment": "Worked in the 4-person DevOps team, joining to reinforce a temporarily reduced headcount during the onboarding of 2 major new SaaS customers.",
+      "description": [
+        "Caprikorn is a subsidiary of the Joul group, born from Ekwateur, providing a SaaS platform and white-label solutions that let companies become energy suppliers and digitally manage their offers, sales and billing.",
+        "The DevOps team runs the IT infrastructure and the software development lifecycle tooling: CI/CD, monitoring, observability and DevSecOps.",
+        "Its main goals are fast and reliable application delivery through automation (IaC, pipelines) and guaranteeing reliability and high availability (DR, fault tolerance, security).",
+        "The scope covers the core SaaS offering and the critical applications of the Ekwateur subsidiary, deployed on AWS."
+      ],
+      "missions": [
+        "Automated the infrastructure with Infrastructure as Code.",
+        "Built and maintained CI/CD pipelines.",
+        "Supervised and monitored applications.",
+        "Managed security and access control.",
+        "Optimized infrastructure costs."
+      ],
+      "technologies": [
+        "Terraform",
+        "AWS",
+        "Cloudflare",
+        "GitLab",
+        "MongoDB",
+        "PostgreSQL",
+        "Traefik",
+        "Kubernetes",
+        "ArgoCD",
+        "Datadog"
+      ],
+      "startDate": "December 2025",
+      "finishDate": "March 2026"
+    },
+    {
+      "position": {
+        "title": "DevOps engineer",
         "company": "Wemanity",
         "client": "CACIB"
       },
