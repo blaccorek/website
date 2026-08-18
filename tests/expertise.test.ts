@@ -23,7 +23,7 @@ for (const domain of DOMAINS) {
 test('the expertise illustrations are decorative', async ({ page }) => {
     await page.goto('/');
     const cards = page.getByRole('article');
-    await expect(cards.locator('img')).toHaveCount(3);
+    await expect(cards.locator('img')).toHaveCount(DOMAINS.length);
     await expect(cards.getByRole('img')).toHaveCount(0);
     await expect(cards.getByRole('button')).toHaveCount(0);
 });
