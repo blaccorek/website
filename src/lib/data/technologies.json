@@ -16,9 +16,17 @@
       "icon": "/images/technologies/clap.png",
       "url": "https://docs.rs/clap/latest/clap/"
     },
+    "Cloudflare": {
+      "icon": "/images/technologies/cloudflare.png",
+      "url": "https://www.cloudflare.com/"
+    },
     "Cypress": {
       "icon": "/images/technologies/cypress.png",
       "url": "https://www.cypress.io/"
+    },
+    "Datadog": {
+      "icon": "/images/technologies/datadog.png",
+      "url": "https://www.datadoghq.com/"
     },
     "Docker": {
       "icon": "/images/technologies/docker.png",
@@ -56,6 +64,14 @@
       "icon": "/images/technologies/kubernetes.png",
       "url": "https://kubernetes.io/"
     },
+    "MongoDB": {
+      "icon": "/images/technologies/mongodb.png",
+      "url": "https://www.mongodb.com/"
+    },
+    "PostgreSQL": {
+      "icon": "/images/technologies/postgresql.png",
+      "url": "https://www.postgresql.org/"
+    },
     "Rancher": {
       "icon": "/images/technologies/rancher.png",
       "url": "https://rancher.com/"
@@ -75,6 +91,14 @@
     "SpringBoot": {
       "icon": "/images/technologies/springboot.png",
       "url": "https://spring.io/projects/spring-boot"
+    },
+    "Terraform": {
+      "icon": "/images/technologies/terraform.png",
+      "url": "https://www.terraform.io/"
+    },
+    "Traefik": {
+      "icon": "/images/technologies/traefik.png",
+      "url": "https://traefik.io/traefik/"
     },
     "Windows 7": {
       "icon": "/images/technologies/windows7.png"

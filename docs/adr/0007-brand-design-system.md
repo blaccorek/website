@@ -35,6 +35,22 @@ Contrast is fixed by convention rather than checked case by case:
 - `primary-500` is for non-text marks — rules, markers, focus rings, dot
   indicators — where contrast rules don't apply.
 
+**Dark surfaces stack, they don't repeat.** Text contrast was never the weak
+point in dark mode — every shade above already cleared AA. Structure was: a
+timeline card painted `gray-900` inside a `gray-900` `<main>` is invisible, and
+a `gray-800` border on `gray-900` (1.21:1) does not rescue it. Dark surfaces
+therefore climb a fixed ramp, one step per nesting level:
+
+| Level        | Surface    | Border     | Example                   |
+| ------------ | ---------- | ---------- | ------------------------- |
+| page floor   | `gray-950` | —          | `<body>`, nav bar         |
+| card         | `gray-900` | `gray-700` | the `<main>` card         |
+| nested panel | `gray-800` | `gray-700` | timeline cards, expertise |
+| chip         | `gray-700` | `gray-600` | technology chips          |
+
+Two surfaces at the same level never nest. Hover borders step to `primary-600`,
+far enough from a resting `gray-700` border (3:1) to actually register.
+
 **Dark mode follows the OS.** The `dark` variant is redefined to match both a
 `.dark` ancestor and `prefers-color-scheme: dark` (unless a `.light` ancestor
 opts out). No toggle, no persisted preference, nothing to hydrate — consistent

@@ -7,9 +7,9 @@
     const { name, icon, url }: Technology = $props();
 
     const chipClasses =
-        'inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200';
+        'inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200';
     const hoverClasses =
-        'hover:border-primary-400 hover:text-primary-700 dark:hover:border-primary-600 dark:hover:text-primary-300';
+        'hover:border-primary-400 hover:text-primary-700 dark:hover:border-primary-500 dark:hover:text-primary-300';
 </script>
 
 {#snippet chipContent()}

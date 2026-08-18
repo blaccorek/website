@@ -12,7 +12,7 @@
     <!-- The rail sits under the markers, inset so it never pokes out. -->
     <span
         aria-hidden="true"
-        class="absolute inset-y-2 start-4 w-px bg-gray-200 dark:bg-gray-800"
+        class="absolute inset-y-2 start-4 w-px bg-gray-200 dark:bg-gray-700"
     ></span>
     {@render children()}
 </ol>

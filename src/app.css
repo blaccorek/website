@@ -54,7 +54,9 @@
     --color-gray-700: #374151;
     --color-gray-800: #1f2937;
     --color-gray-900: #111827;
-    --color-gray-950: #080d16;
+    /* The page floor in dark mode. Kept a step below gray-900 so the `<main>`
+       card reads as raised rather than flush — see ADR-0007. */
+    --color-gray-950: #05070d;
 
     /* Yellow palette */
     --color-yellow-50: #fefce8;
