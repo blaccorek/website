@@ -1,4 +1,3 @@
-import type { Component } from 'svelte';
 import Award from '~icons/lucide/award';
 import Briefcase from '~icons/lucide/briefcase';
 import Check from '~icons/lucide/check';
@@ -7,6 +6,8 @@ import Code from '~icons/lucide/code';
 import GraduationCap from '~icons/lucide/graduation-cap';
 import Rocket from '~icons/lucide/rocket';
 import ShieldCheck from '~icons/lucide/shield-check';
+
+import type { Component } from 'svelte';
 
 export type IconName =
     | 'briefcase'
