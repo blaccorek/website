@@ -3,8 +3,10 @@
     {
       "position": {
         "title": "DevOps engineer",
-        "company": "Caprikorn"
+        "company": "Shodops",
+        "client": "Caprikorn"
       },
+      "location": "Paris",
       "environment": "Worked in the 4-person DevOps team, joining to reinforce a temporarily reduced headcount during the onboarding of 2 major new SaaS customers.",
       "description": [
         "Caprikorn is a subsidiary of the Joul group, born from Ekwateur, providing a SaaS platform and white-label solutions that let companies become energy suppliers and digitally manage their offers, sales and billing.",

@@ -9,6 +9,9 @@ const SIZE_CLASSES: Record<TextSize, string> = {
     '2xl': 'text-xl sm:text-2xl'
 };
 
+/* Long paragraphs carry most of this site, so they get room to breathe. */
+const BASE_CLASSES = 'leading-relaxed';
+
 const TONE_CLASSES: Record<TextTone, string> = {
     default: 'text-gray-700 dark:text-gray-300',
     muted: 'text-gray-500 dark:text-gray-400',
@@ -16,4 +19,4 @@ const TONE_CLASSES: Record<TextTone, string> = {
 };
 
 export const textClasses = (size: TextSize, tone: TextTone): string =>
-    `${SIZE_CLASSES[size]} ${TONE_CLASSES[tone]}`;
+    `${BASE_CLASSES} ${SIZE_CLASSES[size]} ${TONE_CLASSES[tone]}`;

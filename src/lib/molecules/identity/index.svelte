@@ -17,7 +17,7 @@
     ></span>
 
     <div
-        class="mx-auto flex w-full max-w-5xl flex-col items-center gap-5 px-4 pt-12 pb-10 text-center sm:px-6 sm:pt-16 sm:pb-12 lg:px-8"
+        class="mx-auto flex w-full max-w-6xl flex-col items-center gap-5 px-4 pt-12 pb-10 text-center sm:px-6 sm:pt-16 sm:pb-12 lg:px-8"
     >
         <Image
             src={resolve('/favicon.png', {})}

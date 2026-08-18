@@ -8,7 +8,7 @@
 
 <footer class="mt-auto border-t border-gray-200 dark:border-gray-700">
     <div
-        class="mx-auto flex w-full max-w-5xl flex-col items-center gap-3 px-4 py-8 text-sm text-gray-500 sm:flex-row sm:justify-between sm:px-6 lg:px-8 dark:text-gray-400"
+        class="mx-auto flex w-full max-w-6xl flex-col items-center gap-3 px-4 py-8 text-sm text-gray-500 sm:flex-row sm:justify-between sm:px-6 lg:px-8 dark:text-gray-400"
     >
         <p>
             © {currentYear}

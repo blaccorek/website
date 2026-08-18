@@ -1,17 +1,21 @@
 import { describe, expect, it } from 'vitest';
 
-import { ICON_PATHS, type IconName } from './icon.svelte';
+import { ICONS, type IconName } from './icon.svelte';
 
-describe('ICON_PATHS', () => {
-    const names = Object.keys(ICON_PATHS) as IconName[];
+describe('ICONS', () => {
+    const names = Object.keys(ICONS) as IconName[];
 
-    it.each(names)('%s draws at least one path', (name) => {
-        expect(ICON_PATHS[name].length).toBeGreaterThan(0);
+    it('registers every name the type allows', () => {
+        expect(names).toHaveLength(8);
     });
 
-    it.each(names)('%s starts every path with a move command', (name) => {
-        for (const path of ICON_PATHS[name]) {
-            expect(path).toMatch(/^[Mm]/);
-        }
+    it.each(names)('%s resolves to a component', (name) => {
+        expect(ICONS[name]).toBeTypeOf('function');
+    });
+
+    /* Two names pointing at the same import is almost always a copy-paste slip
+       in the map rather than a deliberate choice. */
+    it('draws a distinct glyph for each name', () => {
+        expect(new Set(Object.values(ICONS)).size).toBe(names.length);
     });
 });
