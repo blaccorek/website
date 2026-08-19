@@ -15,3 +15,4 @@ vite.config.ts.timestamp-*
 test-results/
 
 .vscode/settings.json
+playwright-report/
