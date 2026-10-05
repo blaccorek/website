@@ -2,6 +2,47 @@
   "experiences": [
     {
       "position": {
+        "title": "SRE",
+        "company": "Shodops",
+        "client": "Theodo Cloud"
+      },
+      "location": "Paris",
+      "environment": "Worked in a Run team of 4, serving a portfolio of 35 clients and acting as technical referent on several client scopes, covering daily run, improvement projects and technical relationship with client stakeholders.",
+      "description": [
+        "Theodo Cloud is the Theodo group entity dedicated to managed cloud infrastructure, operating critical platforms for its clients and keeping them in operational condition.",
+        "The Run team guarantees the availability, reliability and security of client infrastructures in production, and maintains compliance requirements (HDS, the French equivalent of HIPAA; access management; hardening).",
+        "Its main goals are to industrialise existing infrastructures with Infrastructure as Code, make daily operations reliable (monitoring, incident management, updates) and keep a high level of client satisfaction.",
+        "The scope covers a multi-cloud client portfolio (multi-account AWS, GCP, Azure) across staging, preprod and production environments."
+      ],
+      "missions": [
+        "Operated and maintained client infrastructures in operational condition.",
+        "Automated and migrated existing infrastructure under Infrastructure as Code.",
+        "Managed security, access control and compliance (HDS audits, the French equivalent of HIPAA).",
+        "Monitored services, handled incidents and wrote postmortems.",
+        "Led quarterly healthchecks and client follow-up.",
+        "Optimized infrastructure costs."
+      ],
+      "technologies": [
+        "AWS",
+        "GCP",
+        "Azure",
+        "OVH",
+        "Terraform",
+        "Terragrunt",
+        "Kubernetes",
+        "ArgoCD",
+        "GitLab",
+        "Github",
+        "Jenkins",
+        "PostgreSQL",
+        "MySQL",
+        "Datadog"
+      ],
+      "startDate": "April 2026",
+      "finishDate": "October 2026"
+    },
+    {
+      "position": {
         "title": "DevOps engineer",
         "company": "Shodops",
         "client": "Caprikorn"
@@ -70,7 +111,7 @@
         "Cypress"
       ],
       "startDate": "May 2023",
-      "finishDate": "November 2025"
+      "finishDate": "October 2025"
     },
     {
       "position": {
@@ -89,7 +130,11 @@
       ],
       "finishDate": "May 2023",
       "startDate": "April 2022",
-      "technologies": ["Docker", "Kubernetes", "Jenkins"]
+      "technologies": [
+        "Docker",
+        "Kubernetes",
+        "Jenkins"
+      ]
     },
     {
       "position": {
@@ -108,8 +153,14 @@
         "Migrate Artifactory to AWS."
       ],
       "finishDate": "March 2022",
-      "startDate": "January 2023",
-      "technologies": ["Jenkins", "AWS", "Artifactory", "Docker", "Kubernetes"]
+      "startDate": "January 2021",
+      "technologies": [
+        "Jenkins",
+        "AWS",
+        "Artifactory",
+        "Docker",
+        "Kubernetes"
+      ]
     },
     {
       "position": {
@@ -131,7 +182,7 @@
         "Migrated website to Hugo."
       ],
       "finishDate": "January 2021",
-      "startDate": "January 2019",
+      "startDate": "November 2019",
       "technologies": [
         "SpringBoot",
         "Docker",
@@ -156,13 +207,18 @@
         "Created end-to-end (e2e) tests using Selenium.",
         "Created e2e envionment using Selenim grid and Docker."
       ],
-      "finishDate": "January 2019",
+      "finishDate": "November 2019",
       "startDate": "January 2018",
-      "technologies": ["SpringBoot", "Docker", "GWT", "Selenium"]
+      "technologies": [
+        "SpringBoot",
+        "Docker",
+        "GWT",
+        "Selenium"
+      ]
     },
     {
       "position": {
-        "title": "Deployment Technician",
+        "title": "Rollout Technician",
         "company": "Kobalt",
         "client": "GE Healthcare"
       },
@@ -173,13 +229,15 @@
         "Deployed new laptops and desktops to replace existing user machines.",
         "Provided first-level IT support to end users."
       ],
-      "technologies": ["Windows 10"],
+      "technologies": [
+        "Windows 10"
+      ],
       "startDate": "April 2017",
       "finishDate": "September 2017"
     },
     {
       "position": {
-        "title": "Information Systems Coordinator",
+        "title": "IT Coordinator",
         "company": "Renault retail group"
       },
       "location": "Boulogne",
@@ -190,13 +248,16 @@
         "Migrated users from Windows 7 to Windows 10.",
         "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
       ],
-      "technologies": ["Windows 7", "Windows 10"],
+      "technologies": [
+        "Windows 7",
+        "Windows 10"
+      ],
       "startDate": "September 2016",
       "finishDate": "February 2017"
     },
     {
       "position": {
-        "title": "Information Systems Coordinator",
+        "title": "IT Coordinator",
         "company": "Renault retail group"
       },
       "location": "Paris",
@@ -206,7 +267,9 @@
         "Provided first-level IT support to end users.",
         "Managed the organization's IT and telephony assets, including deployment, maintenance, and inventory tracking."
       ],
-      "technologies": ["Windows 7"],
+      "technologies": [
+        "Windows 7"
+      ],
       "startDate": "October 2015",
       "finishDate": "August 2016"
     }
