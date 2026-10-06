@@ -16,6 +16,12 @@
     "tailwindAttributes": ["class", "className"],
     "overrides": [
         {
+            "files": "src/lib/data/*.json",
+            "options": {
+                "printWidth": 40
+            }
+        },
+        {
             "files": "*.svelte",
             "options": {
                 "parser": "svelte"
