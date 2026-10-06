@@ -1,47 +1,55 @@
 {
   "technologies": {
     "ArgoCD": {
-      "icon": "/images/technologies/argocd.png",
+      "icon": "/images/technologies/argocd.svg",
       "url": "https://argo-cd.readthedocs.io/en/stable/"
     },
     "Artifactory": {
-      "icon": "/images/technologies/artifactory.png",
+      "icon": "/images/technologies/artifactory.svg",
       "url": "https://jfrog.com/artifactory/"
     },
     "AWS": {
-      "icon": "/images/technologies/aws.png",
+      "icon": "/images/technologies/aws.svg",
       "url": "https://aws.amazon.com/"
+    },
+    "Azure": {
+      "icon": "/images/technologies/azure.svg",
+      "url": "https://azure.microsoft.com/"
     },
     "Clap": {
       "icon": "/images/technologies/clap.png",
       "url": "https://docs.rs/clap/latest/clap/"
     },
     "Cloudflare": {
-      "icon": "/images/technologies/cloudflare.png",
+      "icon": "/images/technologies/cloudflare.svg",
       "url": "https://www.cloudflare.com/"
     },
     "Cypress": {
-      "icon": "/images/technologies/cypress.png",
+      "icon": "/images/technologies/cypress.svg",
       "url": "https://www.cypress.io/"
     },
     "Datadog": {
-      "icon": "/images/technologies/datadog.png",
+      "icon": "/images/technologies/datadog.svg",
       "url": "https://www.datadoghq.com/"
     },
     "Docker": {
-      "icon": "/images/technologies/docker.png",
+      "icon": "/images/technologies/docker.svg",
       "url": "https://www.docker.com/"
     },
     "DroneCI": {
-      "icon": "/images/technologies/droneci.png",
+      "icon": "/images/technologies/droneci.svg",
       "url": "https://drone.io/"
     },
     "GCP": {
-      "icon": "/images/technologies/gcp.png",
+      "icon": "/images/technologies/gcp.svg",
       "url": "https://cloud.google.com/"
     },
+    "Github": {
+      "icon": "/images/technologies/github.svg",
+      "url": "https://github.com/"
+    },
     "GitLab": {
-      "icon": "/images/technologies/gitlab.png",
+      "icon": "/images/technologies/gitlab.svg",
       "url": "https://about.gitlab.com/"
     },
     "GWT": {
@@ -49,39 +57,47 @@
       "url": "https://www.gwtproject.org/"
     },
     "Hugo": {
-      "icon": "/images/technologies/hugo.png",
+      "icon": "/images/technologies/hugo.svg",
       "url": "https://gohugo.io/"
     },
     "Jenkins": {
-      "icon": "/images/technologies/jenkins.png",
+      "icon": "/images/technologies/jenkins.svg",
       "url": "https://www.jenkins.io/"
     },
     "Kong": {
-      "icon": "/images/technologies/kong.png",
+      "icon": "/images/technologies/kong.svg",
       "url": "https://konghq.com/"
     },
     "Kubernetes": {
-      "icon": "/images/technologies/kubernetes.png",
+      "icon": "/images/technologies/kubernetes.svg",
       "url": "https://kubernetes.io/"
     },
     "MongoDB": {
-      "icon": "/images/technologies/mongodb.png",
+      "icon": "/images/technologies/mongodb.svg",
       "url": "https://www.mongodb.com/"
     },
+    "MySQL": {
+      "icon": "/images/technologies/mysql.svg",
+      "url": "https://www.mysql.com/"
+    },
+    "OVH": {
+      "icon": "/images/technologies/ovh.svg",
+      "url": "https://www.ovhcloud.com/"
+    },
     "PostgreSQL": {
-      "icon": "/images/technologies/postgresql.png",
+      "icon": "/images/technologies/postgresql.svg",
       "url": "https://www.postgresql.org/"
     },
     "Rancher": {
-      "icon": "/images/technologies/rancher.png",
+      "icon": "/images/technologies/rancher.svg",
       "url": "https://rancher.com/"
     },
     "React": {
-      "icon": "/images/technologies/react.png",
+      "icon": "/images/technologies/react.svg",
       "url": "https://react.dev/"
     },
     "Selenium": {
-      "icon": "/images/technologies/selenium.png",
+      "icon": "/images/technologies/selenium.svg",
       "url": "https://www.selenium.dev/"
     },
     "Specmatic": {
@@ -89,22 +105,25 @@
       "url": "https://docs.specmatic.io/"
     },
     "SpringBoot": {
-      "icon": "/images/technologies/springboot.png",
+      "icon": "/images/technologies/springboot.svg",
       "url": "https://spring.io/projects/spring-boot"
     },
     "Terraform": {
-      "icon": "/images/technologies/terraform.png",
+      "icon": "/images/technologies/terraform.svg",
       "url": "https://www.terraform.io/"
     },
+    "Terragrunt": {
+      "url": "https://terragrunt.gruntwork.io/"
+    },
     "Traefik": {
-      "icon": "/images/technologies/traefik.png",
+      "icon": "/images/technologies/traefik.svg",
       "url": "https://traefik.io/traefik/"
     },
     "Windows 7": {
-      "icon": "/images/technologies/windows7.png"
+      "icon": "/images/technologies/windows7.svg"
     },
     "Windows 10": {
-      "icon": "/images/technologies/windows10.png"
+      "icon": "/images/technologies/windows10.svg"
     }
   }
 }
